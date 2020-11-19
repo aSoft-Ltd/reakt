@@ -1,4 +1,4 @@
-# Konfig
+# aSoft Reakt
 ![badge][badge-maven] ![badge][badge-mpp] ![badge][badge-android] ![badge][badge-js] ![badge][badge-jvm]
 
 A gradle tool that helps inject values during build configurations and that can be retrieve at runtime.
