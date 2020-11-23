@@ -1,12 +1,8 @@
 plugins {
-    kotlin("js") version "1.4.10"
-    id("tz.co.asoft.library") version "0.0.7"
-}
-
-kotlin {
-    js(IR) {
-        browser()
-    }
+    kotlin("js")
+    id("tz.co.asoft.library")
+    id("io.codearte.nexus-staging")
+    signing
 }
 
 dependencies {
@@ -16,3 +12,8 @@ dependencies {
     api("org.jetbrains:kotlin-styled:${vers.wrappers.styled}")
     api("org.jetbrains:kotlin-react-router-dom:${vers.wrappers.react_router_dom}")
 }
+
+aSoftLibrary(
+    version = vers.asoft.theme,
+    description = "A theme engine for kotlin/react"
+)
