@@ -18,3 +18,4 @@ pluginManagement {
 rootProject.name = "reakt"
 
 include(":reakt-core")
+include(":reakt-icons:reakt-icons-core")

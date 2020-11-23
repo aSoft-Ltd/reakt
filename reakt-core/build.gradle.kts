@@ -14,6 +14,6 @@ dependencies {
 }
 
 aSoftLibrary(
-    version = vers.asoft.theme,
-    description = "A theme engine for kotlin/react"
+    version = vers.asoft.reakt,
+    description = "A react wrapper tool library for kotlin-react"
 )
