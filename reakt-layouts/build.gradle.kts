@@ -8,6 +8,7 @@ plugins {
 dependencies {
     api(project(":reakt-core"))
     api("tz.co.asoft:theme-react:${vers.asoft.theme}")
+    api(npm("simplebar-react","2.2.0"))
 }
 
 aSoftLibrary(

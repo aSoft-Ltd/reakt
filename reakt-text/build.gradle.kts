@@ -7,11 +7,10 @@ plugins {
 
 dependencies {
     api(project(":reakt-layouts"))
-    api(project(":reakt-media"))
     api(project(":reakt-icons"))
 }
 
 aSoftLibrary(
     version = vers.asoft.reakt,
-    description = "Navigation components of the Reakt lib"
+    description = "Text components of the Reakt lib"
 )
