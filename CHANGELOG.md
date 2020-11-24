@@ -3,15 +3,20 @@
 - Published to maven central
 
 ## Build Src
-- Updated to gradle version 6.7
+- Updated to gradle version 6.7.1
+
+## Dependencies
+- Updated to kotlin 1.4.20
 
 ## New Features
-### gradle-plugins
-- Added the `tz.co.asoft.konfig` plugin
-- Added the `tz.co.asoft.application` plugin
-
-### library
-- Added the `konfig()` method, on all supported platforms
+- Added reakt-buttons
+- Added reakt-feedbacks
+- Added reakt-icons
+- Added reakt-inputs
+- Added reakt-layouts
+- Added reakt-media
+- Added reakt-navigation
+- Added reakt-text
 
 ## Documentation
 - Update readme

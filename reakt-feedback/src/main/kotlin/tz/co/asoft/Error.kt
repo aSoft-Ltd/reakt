@@ -8,7 +8,7 @@ import styled.styledDiv
 
 fun RBuilder.Error(msg: String, handler: (RBuilder.(ReactTheme) -> Unit)? = null) = ThemeConsumer { theme ->
     styledDiv {
-        css { +styles.wrapper }
+        css { +wrapper }
 
         styledDiv {
             css {

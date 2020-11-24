@@ -8,7 +8,7 @@ import tz.co.asoft.*
 
 fun RBuilder.Loader(text: String) = ThemeConsumer { theme ->
     styledDiv {
-        css { +styles.wrapper }
+        css { +wrapper }
 
         styledDiv {
             css { color = theme.primaryColor }

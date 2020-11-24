@@ -5,7 +5,7 @@ import kotlinx.css.Color
 import kotlinx.css.properties.border
 import styled.StyleSheet
 
-object styles : StyleSheet("button") {
+internal object styles : StyleSheet("button") {
     private val button_layout by css {
         display = Display.grid
         gap = Gap("0.3em")

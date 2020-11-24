@@ -2,7 +2,9 @@
 
 package tz.co.asoft
 
+import kotlinx.css.GridTemplateColumns
 import kotlinx.css.em
+import kotlinx.css.gridTemplateColumns
 import react.RBuilder
 import react.RProps
 import styled.css
@@ -33,9 +35,15 @@ private fun RBuilder.Introduction() = Surface(margin = 0.5.em) { theme ->
             +"Contents"
         }
 
-        Grid(cols = "1fr 1fr") {
+        Grid {
+            css {
+                onMobile { gridTemplateColumns = GridTemplateColumns("1fr") }
+                onDesktop { gridTemplateColumns = GridTemplateColumns("1fr 1fr") }
+            }
             Buttons()
             TextInputs()
+            Icons()
+            Feedbacks()
         }
     }
 }

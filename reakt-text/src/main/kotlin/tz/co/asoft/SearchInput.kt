@@ -17,13 +17,12 @@ import kotlinx.browser.document
 fun RBuilder.SearchInput(hint: String, css: RuleSet, onSearch: (String) -> Unit) = ThemeConsumer { theme ->
     styledDiv {
         css {
-            border = "solid 1px ${theme.color.primary}"
+            border = "solid 1px ${theme.primaryColor}"
             borderRadius = 1.em
             color = Color.inherit
             width = 100.pct
             height = 2.em
             display = Display.flex
-            maxWidth = 20.em
             minWidth = 15.em
             alignItems = Align.stretch
             +css

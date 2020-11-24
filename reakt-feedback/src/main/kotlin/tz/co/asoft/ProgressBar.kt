@@ -72,4 +72,6 @@ private class ProgressBar(p: Props) : RComponent<Props, State>(p), CoroutineScop
     }
 }
 
-fun RBuilder.ProgressBar(value: Number? = null) = child(ProgressBar::class.js, Props(value)) {}
+fun RBuilder.ProgressBar(value: Number? = null) = AspectRationDiv {
+    child(ProgressBar::class.js, Props(value)) {}
+}

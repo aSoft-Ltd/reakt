@@ -1,7 +1,14 @@
 package tz.co.asoft
 
+import kotlinx.browser.document
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Job
 import kotlinx.css.*
 import kotlinx.css.Color
+import kotlinx.css.TextAlign
+import kotlinx.css.properties.LineHeight
+import kotlinx.css.properties.s
+import kotlinx.css.properties.transition
 import kotlinx.html.InputType
 import kotlinx.html.id
 import kotlinx.html.js.onBlurFunction
@@ -11,12 +18,12 @@ import org.w3c.dom.HTMLInputElement
 import react.*
 import react.dom.defaultValue
 import react.dom.pre
+import styled.StyleSheet
 import styled.css
 import styled.styledDiv
 import styled.styledInput
 import tz.co.asoft.TextInput.Props
 import tz.co.asoft.TextInput.State
-import kotlinx.browser.document
 
 private class TextInput(p: Props) : RComponent<Props, State>(p) {
     class Props(
@@ -30,10 +37,79 @@ private class TextInput(p: Props) : RComponent<Props, State>(p) {
         val data: Map<String, Any>?
     ) : RProps
 
-    class State(
-        var textValue: String,
-        var isFocused: Boolean
-    ) : RState
+    class State(var textValue: String, var isFocused: Boolean) : RState
+
+    companion object : StyleSheet("text-input-styles") {
+        val root by css {
+            display = Display.inlineBlock
+            position = Position.relative
+            backgroundColor = Color.transparent
+            width = 100.pct
+            border = "none"
+            marginTop = 1.em
+            marginBottom = 1.em
+
+            before {
+                transition(duration = .2.s)
+                position = Position.absolute
+                height = 1.px
+                left = 5.pct
+                bottom = 0.px
+                backgroundColor = Color.black
+            }
+
+            hover {
+                before {
+                    left = 0.pct
+                    height = 2.px
+                }
+            }
+
+            focus {
+                left = 0.pct
+                height = 2.px
+            }
+        }
+
+        val input by css {
+            transition(duration = .2.s)
+            position = Position.relative
+            backgroundColor = Color.transparent
+            minHeight = 1.5.em
+            width = 100.pct
+            minWidth = 10.em
+            border = "none"
+            textAlign = TextAlign.center
+            color = Color.black
+            borderBottomStyle = BorderStyle.solid
+            borderBottomWidth = 2.px
+        }
+
+        private val tagName by css {
+            transition(duration = .2.s)
+            height = 1.5.em
+            width = 100.pct
+            lineHeight = LineHeight(height.value)
+            textAlign = TextAlign.left
+            display = Display.flex
+            alignItems = Align.center
+            justifyContent = JustifyContent.start
+        }
+
+        val labelUnFocused by css {
+            +tagName
+            position = Position.absolute
+            fontSize = 0.8.em
+            bottom = 0.pct
+        }
+
+        val labelFocused by css {
+            +tagName
+            position = Position.absolute
+            fontSize = 0.8.em
+            bottom = 100.pct
+        }
+    }
 
     init {
         state = State(
@@ -46,17 +122,11 @@ private class TextInput(p: Props) : RComponent<Props, State>(p) {
         styledDiv {
             css {
                 color = theme.onBackgroundColor
-                +styles.root
+                +root
             }
 
             styledDiv {
-                css {
-                    if (state.isFocused) {
-                        +styles.labelFocused
-                    } else {
-                        +styles.labelUnFocused
-                    }
-                }
+                css { +if (state.isFocused) labelFocused else labelUnFocused }
                 props.icon?.let {
                     it {}
                     pre { +" " }
@@ -65,48 +135,35 @@ private class TextInput(p: Props) : RComponent<Props, State>(p) {
             }
 
             styledInput {
+                css {
+                    outline = Outline.none
+                    +input
+                    color = Color.inherit
+                    borderBottomColor = theme.primaryColor
+                }
+
                 attrs {
                     id = props.name
                     name = props.name
                     props.value?.let { defaultValue = it }
-                    type = if (props.type == InputType.tel) {
-                        InputType.number
-                    } else {
-                        props.type
-                    }
-
-                    if (state.isFocused) {
-                        placeholder = props.hint
-                    }
-
+                    type = if (props.type == InputType.tel) InputType.number else props.type
+                    if (state.isFocused) placeholder = props.hint
                     required = props.isRequired
-
                     onChangeFunction = {
                         state.textValue = (document.getElementById(id) as HTMLInputElement).value
                     }
 
                     onFocusFunction = {
-                        setState {
-                            isFocused = true
-                        }
+                        setState { isFocused = true }
                     }
 
                     onBlurFunction = {
-                        setState {
-                            isFocused = textValue.isNotEmpty()
-                        }
+                        setState { isFocused = textValue.isNotEmpty() }
                     }
                 }
 
                 props.data?.forEach { (key, value) ->
                     attrs["data-$key"] = value
-                }
-
-                css {
-                    outline = Outline.none
-                    +styles.input
-                    color = Color.inherit
-                    borderBottomColor = theme.primaryColor
                 }
             }
         }

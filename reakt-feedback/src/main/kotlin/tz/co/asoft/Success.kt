@@ -8,14 +8,14 @@ import styled.styledDiv
 
 fun RBuilder.Success(msg: String, handler: (RBuilder.(ReactTheme) -> Unit)? = null) = ThemeConsumer { theme ->
     styledDiv {
-        css { +styles.wrapper }
+        css { +wrapper }
 
         styledDiv {
             css {
                 color = theme.primaryColor
                 fontSize = 3.em
             }
-            FaCheck{}
+            FaCheck {}
         }
 
         styledDiv {
