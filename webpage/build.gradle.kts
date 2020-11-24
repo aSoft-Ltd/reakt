@@ -11,8 +11,12 @@ group = "tz.co.asoft.reakt"
 version = vers.asoft.reakt
 
 konfig {
-    debug()
-    release()
+    debug(
+        "app" to "Rea.kt"
+    )
+    release(
+        "app" to "Rea.kt"
+    )
 }
 
 kotlin {
