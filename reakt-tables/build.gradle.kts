@@ -7,7 +7,7 @@ plugins {
 
 dependencies {
     api(project(":reakt-layouts"))
-    api(project(":reakt-media"))
+    api(project(":reakt-buttons"))
     api(project(":reakt-icons"))
 }
 

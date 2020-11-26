@@ -22,3 +22,5 @@ fun RBuilder.KeyValue(key: String, value: String) = styledDiv {
         +value
     }
 }
+
+inline fun RBuilder.KeyValue(pair: Pair<String, String>) = KeyValue(pair.first, pair.second)

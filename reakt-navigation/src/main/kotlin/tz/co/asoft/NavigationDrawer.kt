@@ -1,8 +1,5 @@
 package tz.co.asoft
 
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.SupervisorJob
-import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.collect
@@ -10,13 +7,17 @@ import kotlinx.coroutines.launch
 import kotlinx.css.*
 import kotlinx.css.properties.s
 import kotlinx.css.properties.transition
-import react.*
+import react.RBuilder
+import react.RProps
+import react.RState
+import react.setState
 import styled.css
 import styled.styledDiv
 import tz.co.asoft.NavigationDrawer.Props
 import tz.co.asoft.NavigationDrawer.State
 
-private class NavigationDrawer(p: Props) : RComponent<Props, State>(p), CoroutineScope by CoroutineScope(SupervisorJob()) {
+@JsExport
+private class NavigationDrawer(p: Props) : Component<Props, State>(p) {
     class Props(
         val drawer: RBuilder.() -> Unit,
         val content: RBuilder.() -> Unit,
@@ -37,10 +38,6 @@ private class NavigationDrawer(p: Props) : RComponent<Props, State>(p), Coroutin
                 setState { drawerState = it }
             }
         }
-    }
-
-    override fun componentWillUnmount() {
-        cancel()
     }
 
     private fun RBuilder.DrawerLayout() = ThemeConsumer { theme ->

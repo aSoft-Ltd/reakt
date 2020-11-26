@@ -19,6 +19,7 @@ import tz.co.asoft.ProfilePic.State
 import kotlin.lazy
 import kotlin.Float
 
+@JsExport
 private class ProfilePic : RComponent<Props, State>() {
     class Props(
         val name: String,

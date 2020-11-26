@@ -11,6 +11,7 @@ import styled.css
 import tz.co.asoft.ImageEditor.Props
 import tz.co.asoft.ImageEditor.State
 
+@JsExport
 private class ImageEditor : RComponent<Props, State>() {
     class Props(
         val file: File,

@@ -3,6 +3,7 @@ package tz.co.asoft
 import kotlinx.browser.document
 import react.dom.render
 import react.router.dom.browserRouter
+import styled.styledDiv
 
 val kfg by lazy { konfig() }
 

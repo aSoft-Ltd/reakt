@@ -9,21 +9,7 @@ inline fun CSSBuilder.centerContent() {
     justifyContent = JustifyContent.center
 }
 
-inline val CSSBuilder.centerContent: CSSBuilder.() -> Unit
-    get() = {
-        textAlign = TextAlign.center
-        justifyContent = JustifyContent.center
-    }
 
 inline fun CSSBuilder.centerSelf() {
     justifySelf = JustifyContent.center
-}
-
-inline val CSSBuilder.centerSelf: CSSBuilder.() -> Unit
-    get() = {
-        justifySelf = JustifyContent.center
-    }
-
-inline fun CSSBuilder.card(elevation: LinearDimension = 4.px) {
-    boxShadow(Color.gray,)
 }

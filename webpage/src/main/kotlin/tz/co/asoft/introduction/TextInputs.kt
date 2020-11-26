@@ -1,4 +1,6 @@
-package tz.co.asoft.introduction
+@file:Suppress("PackageDirectoryMismatch")
+
+package tz.co.asoft
 
 import kotlinx.css.*
 import kotlinx.css.Color

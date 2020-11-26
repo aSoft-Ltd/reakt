@@ -15,6 +15,7 @@ import styled.styledSelect
 import tz.co.asoft.*
 import tz.co.asoft.DropDown.Props
 
+@JsExport
 private class DropDown(p: Props) : RComponent<Props, RState>(p) {
     class Props(
         val value: String?,

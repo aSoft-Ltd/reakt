@@ -23,6 +23,7 @@ import tz.co.asoft.FileInput.Props
 import tz.co.asoft.FileInput.State
 import tz.co.asoft.onFileInputChanged
 
+@JsExport
 private class FileInput : RComponent<Props, State>(), CoroutineScope by CoroutineScope(SupervisorJob()) {
     class Props(
         val onFileUploaded: ((File) -> Unit)? = null,

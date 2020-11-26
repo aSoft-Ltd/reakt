@@ -3,8 +3,8 @@
     <title>Browser Sample</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="/logo/logo_icon_green.png"/>
-    <link rel="stylesheet" href="/fonts/FuturaBT-Light.woff"/>
+    <link rel="icon" href="./logo/logo_icon_green.png"/>
+    <link rel="stylesheet" href="./fonts/FuturaBT-Light.woff"/>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/styles/default.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/highlight.min.js"></script>
     <style>
@@ -18,14 +18,14 @@
             font-family: "FUTURA_P";
             font-style: normal;
             font-weight: 400;
-            src: url("/fonts/FuturaBT-Light.eot?#iefix") format("embedded-opentype"), url("/fonts/FuturaBT-Light.woff") format("woff"), url("/fonts/FUTURAL.ttf") format("truetype");
+            src: url("./fonts/FuturaBT-Light.eot?#iefix") format("embedded-opentype"), url("./fonts/FuturaBT-Light.woff") format("woff"), url("./fonts/FUTURAL.ttf") format("truetype");
         }
 
         @font-face {
             font-family: "GOTHAM_ROUNDED";
             font-style: normal;
             font-weight: 400;
-            src: url("/fonts/GothamRoundedBook_21018.ttf") format("truetype");
+            src: url("./fonts/GothamRoundedBook_21018.ttf") format("truetype");
         }
 
         ul.control-dots {
@@ -95,7 +95,7 @@
         <h1>
             Browser Sample
         </h1>
-        <img id=loader src="/imgs/loading/loader.svg" style="min-width: 200px"/>
+        <img id=loader src="./imgs/loading/loader.svg" style="min-width: 200px"/>
         <br/>
         <h1>
             Give us a second please
@@ -108,12 +108,13 @@
         var script = document.createElement("script");
         script.src = src;
         script.async = true;
+        script.charset = "UTF-8"
         script.type = "text/javascript";
         document.body.appendChild(script);
     }
 
     setTimeout(function () {
-        loadScript("/webpage.js")
+        loadScript("./webpage.js")
     }, 10);
 </script>
 <script>hljs.initHighlightingOnLoad();</script>
