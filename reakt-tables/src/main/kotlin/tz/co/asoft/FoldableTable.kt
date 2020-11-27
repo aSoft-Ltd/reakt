@@ -1,4 +1,5 @@
 @file:JsModule("react-table/lib/hoc/foldableTable")
+@file:JsNonModule
 
 package tz.co.asoft
 

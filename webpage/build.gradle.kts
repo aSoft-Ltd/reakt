@@ -37,6 +37,7 @@ kotlin {
                 implementation(project(":reakt-navigation"))
                 implementation(project(":reakt-text"))
                 implementation(project(":reakt-inputs"))
+                implementation(project(":reakt-composites"))
                 implementation(npm("@types/enzyme", "3.10.8", generateExternals = false))
                 implementation(npm("@types/enzyme-adapter-react-16", "1.0.6", generateExternals = false))
             }

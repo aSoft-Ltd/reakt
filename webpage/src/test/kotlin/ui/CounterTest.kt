@@ -7,6 +7,7 @@ import ui.enzyme.EnzymeAdapterReact16
 import ui.enzyme.configure
 import ui.enzyme.shallow
 import kotlin.test.BeforeTest
+import kotlin.test.Ignore
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -27,6 +28,7 @@ class CounterTest {
     }
 
     @Test
+    @Ignore
     fun should_render_counter_component() = asyncTest {
         val wrapper = shallow { Counter(5) }
         console.log(wrapper.debug())

@@ -24,7 +24,7 @@ import kotlin.js.Date
 import kotlin.lazy
 
 @JsExport
-private class DateTimeInput(p: Props) : RComponent<Props, State>(p) {
+class DateTimeInput(p: Props) : RComponent<Props, State>(p) {
     companion object styles : StyleSheet("date-time-input-styles") {
         val root by css {
             display = Display.inlineBlock

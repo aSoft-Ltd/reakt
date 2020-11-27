@@ -21,7 +21,7 @@ fun RBuilder.Success(msg: String, handler: (RBuilder.(ReactTheme) -> Unit)? = nu
         styledDiv {
             css {
                 margin(1.em)
-                color = theme.onBackgroundColor
+                color = theme.onSurfaceColor
             }
             +msg
         }

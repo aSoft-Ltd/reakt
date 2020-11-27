@@ -13,7 +13,7 @@ import tz.co.asoft.Tabs.Props
 import tz.co.asoft.Tabs.State
 
 @JsExport
-private class Tabs(p: Props) : RComponent<Props, State>(p) {
+class Tabs(p: Props) : RComponent<Props, State>(p) {
     class Props(
         val lineSize: LinearDimension,
         val beforeTabs: (StyledDOMBuilder<DIV>.() -> Unit)?,

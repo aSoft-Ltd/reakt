@@ -8,25 +8,23 @@ import styled.StyleSheet
 import tz.co.asoft.Theme
 import tz.co.asoft.dropdown_clazz
 
-internal object styles : StyleSheet("themed-react-table") {
-    private val follow_theme by css {
-        backgroundColor = Color.transparent
-        color = Color.inherit
+private val follow_theme: RuleSet = {
+    backgroundColor = Color.transparent
+    color = Color.inherit
+}
+
+internal fun table(theme: ReactTheme): RuleSet = {
+    color = Color.inherit
+    child("div .rt-noData") {
+        +follow_theme
     }
 
-    fun table(theme: ReactTheme): RuleSet = {
-        color = Color.inherit
-        child("div .rt-noData") {
-            +follow_theme
-        }
+    child("div .pagination-bottom .-pagination .-center .-pageInfo .-pageJump input") {
+        +follow_theme
+    }
 
-        child("div .pagination-bottom .-pagination .-center .-pageInfo .-pageJump input") {
-            +follow_theme
-        }
-
-        child("div .pagination-bottom .-pagination .-center span select") {
-            +follow_theme
-            +theme.dropdown_clazz
-        }
+    child("div .pagination-bottom .-pagination .-center span select") {
+        +follow_theme
+        +theme.dropdown_clazz
     }
 }

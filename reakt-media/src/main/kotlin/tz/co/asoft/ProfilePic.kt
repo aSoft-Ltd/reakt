@@ -20,7 +20,7 @@ import kotlin.lazy
 import kotlin.Float
 
 @JsExport
-private class ProfilePic : RComponent<Props, State>() {
+class ProfilePic : RComponent<Props, State>() {
     class Props(
         val name: String,
         val src: String?,

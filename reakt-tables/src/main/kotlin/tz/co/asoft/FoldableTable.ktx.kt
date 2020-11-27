@@ -30,7 +30,7 @@ fun <D : Any> RBuilder.FoldableTable(
     }
 
     styledDiv {
-        css { +styles.table(theme) }
+        css { +table(theme) }
         Table {
             attrs.FoldIconComponent = { FoldIconComponent(it) }
             attrs.data = data.toTypedArray()

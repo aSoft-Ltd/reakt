@@ -17,7 +17,7 @@ import tz.co.asoft.NavigationDrawer.Props
 import tz.co.asoft.NavigationDrawer.State
 
 @JsExport
-private class NavigationDrawer(p: Props) : Component<Props, State>(p) {
+class NavigationDrawer(p: Props) : Component<Props, State>(p) {
     class Props(
         val drawer: RBuilder.() -> Unit,
         val content: RBuilder.() -> Unit,

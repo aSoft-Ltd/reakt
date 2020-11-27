@@ -10,10 +10,7 @@ import styled.styledDiv
 
 private val drawerState = MutableStateFlow(DrawerState.Closed)
 
-fun RBuilder.ReaktWebpage(
-    moduleGroups: Map<String, List<NavMenu>>,
-    pages: List<WebPage<out RProps>>
-) = NavigationDrawer(
+fun RBuilder.ReaktWebpage(moduleGroups: Map<String, List<NavMenu>>, pages: List<WebPage<out RProps>>) = NavigationDrawer(
     drawerState = drawerState,
     drawer = {
         NavPane(
@@ -32,5 +29,6 @@ fun RBuilder.ReaktWebpage(
             }
             redirect(to = "/")
         }
+        FooterRibbon("aSoft Ltd")
     }
 )

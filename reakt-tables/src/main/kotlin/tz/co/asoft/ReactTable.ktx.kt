@@ -67,7 +67,7 @@ fun <D : Any> RBuilder.ReactTable(
     }
 
     styledDiv {
-        css { +styles.table(theme) }
+        css { +table(theme) }
         child(ReactTable::class.js, jsObject<TableProps<D>> {}) {
             attrs.data = data.toTypedArray()
             attrs.columns = columns + actions
