@@ -3,6 +3,8 @@
 
 This is an opinionated kotlin first react ui toolkit with multiple components
 
+Documentation is still being prepared
+
 ## Setup:Gradle
 ```kotlin
 dependencies {

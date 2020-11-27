@@ -16,6 +16,7 @@
 - Added reakt-layouts
 - Added reakt-media
 - Added reakt-navigation
+- Added reakt-composites
 - Added reakt-text
 
 ## Documentation
