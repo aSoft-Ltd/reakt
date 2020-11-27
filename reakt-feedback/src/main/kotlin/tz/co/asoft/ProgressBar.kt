@@ -9,7 +9,8 @@ import styled.styledProgress
 import tz.co.asoft.ProgressBar.Props
 import tz.co.asoft.ProgressBar.State
 
-private class ProgressBar(p: Props) : RComponent<Props, State>(p), CoroutineScope by CoroutineScope(SupervisorJob()) {
+@JsExport
+class ProgressBar(p: Props) : Component<Props,State>(p) {
     class Props(val value: Number?) : RProps
 
     class State : RState {

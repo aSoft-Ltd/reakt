@@ -10,7 +10,6 @@ import react.RProps
 import styled.css
 import styled.styledDiv
 import tz.co.asoft.introduction.Buttons
-import tz.co.asoft.introduction.TextInputs
 
 private fun RBuilder.Introduction() = Surface(margin = 0.5.em) { theme ->
     Grid {
@@ -44,6 +43,9 @@ private fun RBuilder.Introduction() = Surface(margin = 0.5.em) { theme ->
             TextInputs()
             Icons()
             Feedbacks()
+            Layouts()
+            OtherInputs()
+            Media()
         }
     }
 }

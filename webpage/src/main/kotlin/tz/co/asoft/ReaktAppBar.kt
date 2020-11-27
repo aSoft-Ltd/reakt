@@ -9,5 +9,14 @@ fun RBuilder.ReaktAppBar(drawerController: MutableStateFlow<DrawerState>) = Navi
     middle = { theme ->
         css { +theme.text.h1.clazz }
         +"Reakt Components"
+    },
+    right = {
+        Switch("Theme", "dark") {
+            currentTheme.value = if (currentTheme.value.color == AquaGreenPallet) {
+                DarkGrayTheme()
+            } else {
+                AquaGreenTheme()
+            }
+        }
     }
 )

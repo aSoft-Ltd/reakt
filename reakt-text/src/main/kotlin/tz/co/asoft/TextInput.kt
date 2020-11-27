@@ -25,7 +25,8 @@ import styled.styledInput
 import tz.co.asoft.TextInput.Props
 import tz.co.asoft.TextInput.State
 
-private class TextInput(p: Props) : RComponent<Props, State>(p) {
+@JsExport
+class TextInput(p: Props) : RComponent<Props, State>(p) {
     class Props(
         val name: String,
         val label: String,

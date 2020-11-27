@@ -19,7 +19,8 @@ import styled.styledInput
 import tz.co.asoft.ImageUploader.Props
 import tz.co.asoft.ImageUploader.State
 
-private class ImageUploader(p: Props) : RComponent<Props, State>(p) {
+@JsExport
+class ImageUploader(p: Props) : RComponent<Props, State>(p) {
     class Props(
         val data: Map<String, Any>?,
         val onUploaded: ((File, String) -> Unit)?

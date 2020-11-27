@@ -14,7 +14,8 @@ import styled.css
 import styled.styledDiv
 import tz.co.asoft.NavPane.Props
 
-private class NavPane : RComponent<Props, RState>() {
+@JsExport
+class NavPane : RComponent<Props, RState>() {
     class Props(
         val drawerController: MutableStateFlow<DrawerState>,
         val header: StyledDOMBuilder<DIV>.(ReactTheme) -> Unit,

@@ -23,10 +23,11 @@ import tz.co.asoft.FileInput.Props
 import tz.co.asoft.FileInput.State
 import tz.co.asoft.onFileInputChanged
 
-private class FileInput : RComponent<Props, State>(), CoroutineScope by CoroutineScope(SupervisorJob()) {
+@JsExport
+class FileInput : RComponent<Props, State>(), CoroutineScope by CoroutineScope(SupervisorJob()) {
     class Props(
-        val onFileUploaded: ((File) -> Unit)? = null,
-        val isRequired: Boolean = true,
+        val onFileUploaded: ((File) -> Unit)?,
+        val isRequired: Boolean,
         val name: String
     ) : RProps
 

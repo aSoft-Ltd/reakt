@@ -7,9 +7,7 @@ import kotlinx.css.Color
 import kotlinx.css.properties.boxShadow
 import react.RBuilder
 import styled.css
-import styled.styledDiv
 import styled.styledHr
-import tz.co.asoft.*
 
 fun RBuilder.Icons() = Grid(gap = "0em") { theme ->
     css {
@@ -42,10 +40,10 @@ fun RBuilder.Icons() = Grid(gap = "0em") { theme ->
         }
         Fa500Px {}
         FaAddressBook {}
-        MdAccountBox {}
-        DiAndroid {}
-        WiAlien {}
-        Gi3DHammer {}
-        TiAdjustBrightness {}
+        FaAdobe {}
+        FaAngleDown {}
+        FaAppStore {}
+        FaBatteryFull {}
+        FaApplePay {}
     }
 }

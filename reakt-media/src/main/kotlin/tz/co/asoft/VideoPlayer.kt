@@ -10,7 +10,8 @@ import styled.css
 import styled.styledSource
 import styled.styledVideo
 
-private class VideoPlayer(p: Props) : RComponent<Props, RState>(p) {
+@JsExport
+class VideoPlayer(p: Props) : RComponent<Props, RState>(p) {
     class Props(var src: String, var controls: Boolean) : RProps
 
     override fun RBuilder.render(): dynamic = styledVideo {

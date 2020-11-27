@@ -1,11 +1,11 @@
 # aSoft Reakt
 ![badge][badge-maven] ![badge][badge-mpp] ![badge][badge-android] ![badge][badge-js] ![badge][badge-jvm]
 
-This is an opinionated kotlin first reakt ui toolkit with multiple components
+This is an opinionated kotlin first react ui toolkit with multiple components
+
+Documentation is still being prepared
 
 ## Setup:Gradle
-Konfig comes with a gradle plugin as a well as a runtime library. Just do the following
-
 ```kotlin
 dependencies {
     implementation("tz.co.asoft:reakt-[module]:+") // please use the latest version possible

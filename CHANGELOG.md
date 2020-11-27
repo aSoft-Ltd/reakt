@@ -1,4 +1,4 @@
-# 0.0.1
+# 0.0.1 : 2020.11.27
 ## Availability
 - Published to maven central
 
@@ -16,6 +16,7 @@
 - Added reakt-layouts
 - Added reakt-media
 - Added reakt-navigation
+- Added reakt-composites
 - Added reakt-text
 
 ## Documentation

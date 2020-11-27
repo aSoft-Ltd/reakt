@@ -67,4 +67,4 @@ private val Audio = functionalComponent<AudioProps> { props ->
 fun RBuilder.Audio(src: String, volume: Double = 0.5) = child(Audio, jsObject<AudioProps>().also {
     it.src = src
     it.volume = volume
-})
+}){}

@@ -6,6 +6,7 @@ import react.*
 import styled.css
 import styled.styledDiv
 
+@JsExport
 class Dialog : RComponent<Dialog.Props, RState>() {
     class Props(
         val desktopWidth: LinearDimension,
@@ -71,5 +72,7 @@ fun RBuilder.Dialog(
     mobileWidth: LinearDimension = 90.pct,
     width: LinearDimension = 50.pct,
     onExit: () -> Unit,
-    handler: RHandler<Dialog.Props>
-) = child(Dialog::class.js, Dialog.Props(desktopWidth, mobileWidth, width, onExit), handler)
+    children: RBuilder.() -> Unit
+) = child(Dialog::class.js, Dialog.Props(desktopWidth, mobileWidth, width, onExit)) {
+    children()
+}

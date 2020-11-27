@@ -15,7 +15,7 @@ import styled.styledLabel
 fun RBuilder.Switch(
     name: String,
     value: String,
-    label: String = value,
+    label: String = name,
     checked: Boolean = false,
     disabled: Boolean = false,
     required: Boolean = false,

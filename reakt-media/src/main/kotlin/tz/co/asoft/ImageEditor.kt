@@ -11,7 +11,8 @@ import styled.css
 import tz.co.asoft.ImageEditor.Props
 import tz.co.asoft.ImageEditor.State
 
-private class ImageEditor : RComponent<Props, State>() {
+@JsExport
+class ImageEditor : RComponent<Props, State>() {
     class Props(
         val file: File,
         val textFontSize: LinearDimension,

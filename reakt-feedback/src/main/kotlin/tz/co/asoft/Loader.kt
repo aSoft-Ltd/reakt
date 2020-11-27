@@ -16,7 +16,10 @@ fun RBuilder.Loader(text: String) = ThemeConsumer { theme ->
         }
 
         styledDiv {
-            css { margin(1.em) }
+            css {
+                margin(1.em)
+                color = theme.onSurfaceColor
+            }
             +text
         }
     }
