@@ -1,3 +1,22 @@
+# 0.0.5 : 2020.12.02
+## New Features
+- Added `setContent()` extension to `Element?`
+
+## Bug Fixes
+- Fixed React Table import bug
+
+## Dependencies
+- Updated gradle plugin `tz.co.asoft.application` to 0.0.3
+
+## Documentation
+- Update readme
+
+## Samples
+- Deployed to gh-pages
+
+## CI & CD
+- Added a build script to automatically deploy to gh-pages
+
 # 0.0.1 : 2020.11.27
 ## Availability
 - Published to maven central
