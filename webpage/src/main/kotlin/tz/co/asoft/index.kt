@@ -7,7 +7,7 @@ import styled.styledDiv
 
 val kfg by lazy { konfig() }
 
-fun main() = render(document.getElementById("root")) {
+fun main() = document.getElementById("root").setContent {
     browserRouter {
         ThemeProvider {
             ReaktWebpage(

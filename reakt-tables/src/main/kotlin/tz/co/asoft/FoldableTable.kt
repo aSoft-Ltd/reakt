@@ -1,6 +1,3 @@
-@file:JsModule("react-table/lib/hoc/foldableTable")
-@file:JsNonModule
-
 package tz.co.asoft
 
 import react.RClass
@@ -18,5 +15,9 @@ external interface FoldableTableProps<D : Any> : TableProps<D> {
     var FoldButtonComponent: (FoldIconProps) -> ReactElement
 }
 
-@JsName("default")
-internal external fun <D : Any> foldableTableHOC(clazz: JsClass<ReactTable<*>>): RClass<FoldableTableProps<D>>
+@JsModule("react-table/lib/hoc/foldableTable")
+@JsNonModule
+internal external object ReactFoladableTable {
+    @JsName("default")
+    fun <D : Any> foldableTableHOC(clazz: JsClass<ReactTableModule.ReactTable<*>>): RClass<FoldableTableProps<D>>
+}
