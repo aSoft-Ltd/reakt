@@ -10,7 +10,7 @@ dependencies {
 }
 
 aSoftLibrary(
-    version = vers.asoft.theme,
+    version = vers.asoft.reakt,
     description = "A non opinionated icon props"
 )
 

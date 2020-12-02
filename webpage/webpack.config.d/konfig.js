@@ -1,1 +1,1 @@
-config.resolve.modules.push("../resources/main")
+config.resolve.modules.push("/media/andylamax/63C23C360914D355/aSoft/OSS Libs/reakt/code/webpage/build/resources/main")

@@ -6,8 +6,6 @@
     "EXTERNAL_DELEGATION",
     "NESTED_CLASS_IN_EXTERNAL_INTERFACE"
 )
-@file:JsModule("react-table")
-@file:JsNonModule
 
 package tz.co.asoft
 
@@ -31,9 +29,13 @@ external interface SortingRule {
     var desc: Boolean
 }
 
-@JsName("default")
-internal external class ReactTable<D : Any> : Component<TableProps<D>, RState> {
-    override fun render(): dynamic
+@JsModule("react-table")
+@JsNonModule
+external object ReactTableModule {
+    @JsName("default")
+    class ReactTable<D : Any>: Component<TableProps<D>, RState> {
+        override fun render(): dynamic
+    }
 }
 
 external interface TableProps<D : Any> : RProps {

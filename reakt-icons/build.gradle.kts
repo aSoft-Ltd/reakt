@@ -11,6 +11,6 @@ dependencies {
 }
 
 aSoftLibrary(
-    version = vers.asoft.theme,
+    version = vers.asoft.reakt,
     description = "A kotlin js wrapper for the react-icons React lib"
 )

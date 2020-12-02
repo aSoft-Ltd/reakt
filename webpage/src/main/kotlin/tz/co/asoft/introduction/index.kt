@@ -46,6 +46,7 @@ private fun RBuilder.Introduction() = Surface(margin = 0.5.em) { theme ->
             Layouts()
             OtherInputs()
             Media()
+            Tables()
         }
     }
 }

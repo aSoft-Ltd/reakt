@@ -38,6 +38,7 @@ kotlin {
                 implementation(project(":reakt-text"))
                 implementation(project(":reakt-inputs"))
                 implementation(project(":reakt-composites"))
+                implementation(project(":reakt-tables"))
                 implementation(npm("@types/enzyme", "3.10.8", generateExternals = false))
                 implementation(npm("@types/enzyme-adapter-react-16", "1.0.6", generateExternals = false))
             }
