@@ -68,7 +68,7 @@ fun <D : Any> RBuilder.ReactTable(
 
     styledDiv {
         css { +table(theme) }
-        child(ReactTable::class.js, jsObject<TableProps<D>> {}) {
+        child(ReactTableModule.ReactTable::class.js, jsObject<TableProps<D>> {}) {
             attrs.data = data.toTypedArray()
             attrs.columns = columns + actions
             attrs.showPaginationTop = showPaginationTop

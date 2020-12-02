@@ -5,6 +5,7 @@ import kotlinx.css.*
 import react.RBuilder
 import react.RHandler
 import react.buildElement
+import tz.co.asoft.ReactFoladableTable.foldableTableHOC
 import styled.css
 import styled.styledDiv
 
@@ -23,7 +24,7 @@ fun <D : Any> RBuilder.FoldableTable(
     filterable: Boolean = true,
     handler: RHandler<FoldableTableProps<D>>? = null
 ) = ThemeConsumer { theme ->
-    val Table = foldableTableHOC<D>(ReactTable::class.js)
+    val Table = foldableTableHOC<D>(ReactTableModule.ReactTable::class.js)
     if (!isReactTableCssLoaded) {
         require("react-table/react-table.css")
         isReactTableCssLoaded = true
