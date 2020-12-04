@@ -1,3 +1,10 @@
+# 0.0.6 : 2020.12.04
+## New Features
+- Allowed nullable generics in ReactTable and FoldableTable
+
+## Build Script
+- Unified versions in one place
+
 # 0.0.5 : 2020.12.02
 ## New Features
 - Added `setContent()` extension to `Element?`
