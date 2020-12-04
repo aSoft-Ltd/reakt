@@ -16,7 +16,7 @@ fun <D : Any> Column<D>.access(trans: (D) -> Any) {
     accessor = trans
 }
 
-inline fun <D : Any> column(name: String, builder: Column<D>.() -> Unit): Column<D> = jsObject {
+inline fun <D> column(name: String, builder: Column<D>.() -> Unit): Column<D> = jsObject {
     Header = name
     foldable = true
     onFilter { key, rowContent -> rowContent.contains(key, ignoreCase = true) }
@@ -28,11 +28,11 @@ fun <D : Any> Column(name: String, trans: (D) -> Any) =
 
 inline operator fun Row<*>.get(key: String): String = this.asDynamic()[key]
 
-inline fun <D : Any> Column<D>.render(crossinline builder: RBuilder.(D) -> ReactElement) {
+inline fun <D> Column<D>.render(crossinline builder: RBuilder.(D) -> ReactElement) {
     Cell = { row -> buildElement { builder(row.original) } }
 }
 
-inline fun <D : Any> RenderColumn(name: String, crossinline builder: RBuilder.(D) -> ReactElement) =
+inline fun <D> RenderColumn(name: String, crossinline builder: RBuilder.(D) -> ReactElement) =
     column<D>(name) {
         filterable = false
         render(builder)
@@ -46,7 +46,7 @@ inline fun Column<*>.onFilter(crossinline handler: (key: String, rowContent: Str
     filterMethod = { filter, row, _ -> handler(filter.value, row[filter.pivotId ?: filter.id]) }
 }
 
-fun <D : Any> RBuilder.ReactTable(
+fun <D> RBuilder.ReactTable(
     data: List<D>,
     columns: List<Column<D>>,
     actions: List<AButton<D>>? = null,
@@ -85,7 +85,7 @@ fun <D : Any> RBuilder.ReactTable(
     }
 }
 
-operator fun <D : Any> List<Column<D>>.plus(actions: List<AButton<D>>?) = if (actions == null) {
+operator fun <D> List<Column<D>>.plus(actions: List<AButton<D>>?) = if (actions == null) {
     toTypedArray()
 } else {
     val actionsColumn = RenderColumn<D>("Actions") {

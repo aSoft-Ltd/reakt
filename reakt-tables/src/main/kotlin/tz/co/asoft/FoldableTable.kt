@@ -10,7 +10,7 @@ external interface FoldIconProps {
     val onClick: () -> Unit
 }
 
-external interface FoldableTableProps<D : Any> : TableProps<D> {
+external interface FoldableTableProps<D> : TableProps<D> {
     var FoldIconComponent: (FoldIconProps) -> ReactElement
     var FoldButtonComponent: (FoldIconProps) -> ReactElement
 }
@@ -19,5 +19,5 @@ external interface FoldableTableProps<D : Any> : TableProps<D> {
 @JsNonModule
 internal external object ReactFoladableTable {
     @JsName("default")
-    fun <D : Any> foldableTableHOC(clazz: JsClass<ReactTableModule.ReactTable<*>>): RClass<FoldableTableProps<D>>
+    fun <D> foldableTableHOC(clazz: JsClass<ReactTableModule.ReactTable<*>>): RClass<FoldableTableProps<D>>
 }

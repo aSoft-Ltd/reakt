@@ -38,7 +38,7 @@ external object ReactTableModule {
     }
 }
 
-external interface TableProps<D : Any> : RProps {
+external interface TableProps<D> : RProps {
     var data: Array<D>
     var loading: Boolean
     var showPagination: Boolean
@@ -86,7 +86,7 @@ external interface FilterProp {
     var onChange: (String) -> Unit
 }
 
-external interface Column<D : Any> {
+external interface Column<D> {
     var Header: dynamic
     var accessor: dynamic
     var id: String

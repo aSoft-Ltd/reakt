@@ -1,9 +1,13 @@
 object vers {
+    val kotlin = "1.4.20"
+    val agp = "4.1.0"
+    val nexus_staging = "0.22.0"
+
     object asoft {
-        val reakt = "0.0.5"
+        val reakt = "0.0.6"
         val kotlinx_extensions = "0.0.1"
         val theme = "0.0.4"
-        val konfig = "0.0.3"
+        val builders = "1.1.1"
     }
 
     object kotlinx {

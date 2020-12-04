@@ -58,9 +58,6 @@ jobs:
       - name: Making gradlew executable
         run: chmod +x ./gradlew
         working-directory: .
-      - name: Publishing reakt
-        run: ./gradlew build
-        working-directory: .
       - name: publishing reakt
         run: ./gradlew publish
         working-directory: .

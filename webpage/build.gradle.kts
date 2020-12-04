@@ -1,6 +1,6 @@
 plugins {
     kotlin("js")
-    id("tz.co.asoft.application")
+    id("tz.co.asoft.applikation")
 }
 
 repositories {
@@ -11,14 +11,13 @@ repositories {
 group = "tz.co.asoft.reakt"
 version = vers.asoft.reakt
 
-konfig {
+applikation {
     debug()
     release()
 }
 
 kotlin {
     js(IR) {
-        useCommonJs()
         browser {
             commonWebpackConfig { cssSupport.enabled = true }
             testTask {
@@ -33,7 +32,7 @@ kotlin {
     sourceSets {
         val main by getting {
             dependencies {
-                implementation("tz.co.asoft:konfig:${vers.asoft.konfig}")
+                implementation("tz.co.asoft:applikation-runtime:${vers.asoft.builders}")
                 implementation(project(":reakt-navigation"))
                 implementation(project(":reakt-text"))
                 implementation(project(":reakt-inputs"))
