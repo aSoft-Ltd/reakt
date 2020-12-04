@@ -84,7 +84,7 @@ fun <D> RBuilder.ReactTable(
     }
 }
 
-private operator fun <D> List<Column<D>>.plus(actions: List<AButton<D>>?) = if (actions == null) {
+internal operator fun <D> List<Column<D>>.plus(actions: List<AButton<D>>?) = if (actions == null) {
     toTypedArray()
 } else {
     val actionsColumn = RenderColumn<D>("Actions") {
