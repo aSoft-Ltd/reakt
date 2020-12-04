@@ -1,3 +1,7 @@
+# 0.0.7 : 2020.12.04
+## New Features
+- Allowed nullable generics in ReactTable and FoldableTable Columns
+
 # 0.0.6 : 2020.12.04
 ## New Features
 - Allowed nullable generics in ReactTable and FoldableTable
