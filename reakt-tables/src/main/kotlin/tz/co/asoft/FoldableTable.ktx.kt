@@ -9,7 +9,7 @@ import tz.co.asoft.ReactFoladableTable.foldableTableHOC
 import styled.css
 import styled.styledDiv
 
-fun <D : Any> RBuilder.FoldableTable(
+fun <D> RBuilder.FoldableTable(
     data: List<D>,
     columns: List<Column<D>>,
     actions: List<AButton<D>>? = null,
