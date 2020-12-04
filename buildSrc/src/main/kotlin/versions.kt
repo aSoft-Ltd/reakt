@@ -4,7 +4,7 @@ object vers {
     val nexus_staging = "0.22.0"
 
     object asoft {
-        val reakt = "0.0.6"
+        val reakt = "0.0.7"
         val kotlinx_extensions = "0.0.1"
         val theme = "0.0.4"
         val builders = "1.1.1"
