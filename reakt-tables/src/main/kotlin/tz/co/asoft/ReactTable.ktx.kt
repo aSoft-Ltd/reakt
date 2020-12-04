@@ -11,7 +11,7 @@ import styled.css
 import styled.styledDiv
 
 internal var isReactTableCssLoaded = false
-fun <D : Any> Column<D>.access(trans: (D) -> Any) {
+fun <D> Column<D>.access(trans: (D) -> Any) {
     id = "$Header"
     accessor = trans
 }
@@ -23,8 +23,7 @@ inline fun <D> column(name: String, builder: Column<D>.() -> Unit): Column<D> = 
     builder()
 }
 
-fun <D : Any> Column(name: String, trans: (D) -> Any) =
-    column<D>(name = name, builder = { access(trans) })
+fun <D> Column(name: String, trans: (D) -> Any) = column<D>(name = name, builder = { access(trans) })
 
 inline operator fun Row<*>.get(key: String): String = this.asDynamic()[key]
 
@@ -85,7 +84,7 @@ fun <D> RBuilder.ReactTable(
     }
 }
 
-operator fun <D> List<Column<D>>.plus(actions: List<AButton<D>>?) = if (actions == null) {
+internal operator fun <D> List<Column<D>>.plus(actions: List<AButton<D>>?) = if (actions == null) {
     toTypedArray()
 } else {
     val actionsColumn = RenderColumn<D>("Actions") {
@@ -93,8 +92,7 @@ operator fun <D> List<Column<D>>.plus(actions: List<AButton<D>>?) = if (actions 
             css {
                 display = Display.grid
                 width = 100.pct
-                gridTemplateColumns =
-                    GridTemplateColumns(actions.joinToString(separator = " ") { "1fr" })
+                gridTemplateColumns = GridTemplateColumns(actions.joinToString(separator = " ") { "1fr" })
             }
             for (action in actions) Button(action, it)
         }
