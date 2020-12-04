@@ -1,6 +1,6 @@
 plugins {
-    kotlin("multiplatform") version "1.4.20" apply false
-    id("tz.co.asoft.library") version "1.0.0" apply false
-    id("io.codearte.nexus-staging") version "0.22.0" apply false
-    id("tz.co.asoft.application") version "0.0.3" apply false
+    kotlin("multiplatform") version vers.kotlin apply false
+    id("tz.co.asoft.library") version vers.asoft.builders apply false
+    id("io.codearte.nexus-staging") version vers.nexus_staging apply false
+    id("tz.co.asoft.applikation") version vers.asoft.builders apply false
 }
