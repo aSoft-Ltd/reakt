@@ -1,6 +1,9 @@
-# 0.0.7 : 2020.12.04
+# 0.0.8 : 2020.12.21
 ## New Features
 - Added default message in `Success` widget
+
+## Documentation
+- Updated readme to point to gh-pages
 
 # 0.0.7 : 2020.12.04
 ## New Features

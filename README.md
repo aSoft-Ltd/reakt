@@ -3,14 +3,14 @@
 
 This is an opinionated kotlin first react ui toolkit with multiple components
 
-Documentation is still being prepared
-
 ## Setup:Gradle
 ```kotlin
 dependencies {
     implementation("tz.co.asoft:reakt-[module]:+") // please use the latest version possible
 }
 ```
+
+Documentation is available at (https://asoft-ltd.github.io/reakt)[https://asoft-ltd.github.io/reakt/]
 
 [badge-maven]: https://img.shields.io/maven-central/v/tz.co.asoft/test/1.0.1?style=flat
 [badge-mpp]: https://img.shields.io/badge/kotlin-multiplatform-blue?style=flat
