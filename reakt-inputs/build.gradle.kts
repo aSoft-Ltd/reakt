@@ -9,7 +9,7 @@ dependencies {
     api(project(":reakt-feedback"))
 }
 
-aSoftLibrary(
+aSoftOSSLibrary(
     version = vers.asoft.reakt,
     description = "A non opinionated icon props"
 )

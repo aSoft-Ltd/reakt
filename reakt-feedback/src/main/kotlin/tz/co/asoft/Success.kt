@@ -6,7 +6,7 @@ import react.RBuilder
 import styled.css
 import styled.styledDiv
 
-fun RBuilder.Success(msg: String, handler: (RBuilder.(ReactTheme) -> Unit)? = null) = ThemeConsumer { theme ->
+fun RBuilder.Success(msg: String = "Success", handler: (RBuilder.(ReactTheme) -> Unit)? = null) = ThemeConsumer { theme ->
     styledDiv {
         css { +wrapper }
 

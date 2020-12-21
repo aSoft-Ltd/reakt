@@ -13,7 +13,7 @@ dependencies {
     api("org.jetbrains:kotlin-react-router-dom:${vers.wrappers.react_router_dom}")
 }
 
-aSoftLibrary(
+aSoftOSSLibrary(
     version = vers.asoft.reakt,
     description = "A react wrapper tool library for kotlin-react"
 )

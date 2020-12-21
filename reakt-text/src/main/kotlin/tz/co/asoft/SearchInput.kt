@@ -88,6 +88,6 @@ private fun RBuilder.SearchButton(onSearch: (String) -> Unit) = ThemeConsumer { 
             cursor = Cursor.pointer
         }
         attrs.onClickFunction = { onSearch((document.getElementById(ID.value).unsafeCast<HTMLInputElement>()).value) }
-        +"Search"
+        +"Go"
     }
 }

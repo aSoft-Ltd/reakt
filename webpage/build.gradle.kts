@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig.DevServer
+
 plugins {
     kotlin("js")
     id("tz.co.asoft.applikation")
@@ -19,7 +21,13 @@ applikation {
 kotlin {
     js(IR) {
         browser {
-            commonWebpackConfig { cssSupport.enabled = true }
+            commonWebpackConfig {
+                cssSupport.enabled = true
+                devServer = DevServer(
+                    open = false,
+                    contentBase = listOf(file("build/processedResources/js/main").absolutePath)
+                )
+            }
             testTask {
                 useKarma {
                     useFirefoxDeveloperHeadless()

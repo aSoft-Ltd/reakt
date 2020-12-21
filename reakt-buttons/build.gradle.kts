@@ -11,7 +11,7 @@ dependencies {
     api("tz.co.asoft:theme-react:${vers.asoft.theme}")
 }
 
-aSoftLibrary(
+aSoftOSSLibrary(
     version = vers.asoft.reakt,
     description = "Buttons of the Reakt lib"
 )

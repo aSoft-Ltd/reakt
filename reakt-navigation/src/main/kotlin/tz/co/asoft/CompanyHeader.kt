@@ -7,10 +7,7 @@ import styled.css
 import styled.styledDiv
 import styled.styledImg
 
-fun RBuilder.CompanyHeader(
-    logoPath: String,
-    userName: String
-) = ThemeConsumer { theme ->
+fun RBuilder.CompanyHeader(logoPath: String, userName: String) = ThemeConsumer { theme ->
     styledDiv {
         css {
             position = Position.relative
