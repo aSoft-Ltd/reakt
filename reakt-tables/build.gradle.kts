@@ -13,7 +13,7 @@ dependencies {
     api(npm("file-loader","6.2.0"))
 }
 
-aSoftLibrary(
+aSoftOSSLibrary(
     version = vers.asoft.reakt,
     description = "Navigation components of the Reakt lib"
 )

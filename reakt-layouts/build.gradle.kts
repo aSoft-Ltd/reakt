@@ -12,7 +12,7 @@ dependencies {
     api(npm("simplebar-react","2.2.0"))
 }
 
-aSoftLibrary(
+aSoftOSSLibrary(
     version = vers.asoft.reakt,
     description = "Layouts of the Reakt lib"
 )

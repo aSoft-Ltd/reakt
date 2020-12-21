@@ -10,7 +10,7 @@ dependencies {
     api(npm("react-icons", "3.10.0"))
 }
 
-aSoftLibrary(
+aSoftOSSLibrary(
     version = vers.asoft.reakt,
     description = "A kotlin js wrapper for the react-icons React lib"
 )

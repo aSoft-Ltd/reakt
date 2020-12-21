@@ -13,12 +13,11 @@ private val drawerState = MutableStateFlow(DrawerState.Closed)
 fun RBuilder.ReaktWebpage(moduleGroups: Map<String, List<NavMenu>>, pages: List<WebPage<out RProps>>) = NavigationDrawer(
     drawerState = drawerState,
     drawer = {
+        val version: String by konfig()
         NavPane(
             drawerController = drawerState,
             moduleGroups = moduleGroups,
-            header = {
-                styledDiv { +"Test Header" }
-            }
+            header = { CompanyHeader("/k+r.png", "Reakt $version") }
         )
     },
     content = {

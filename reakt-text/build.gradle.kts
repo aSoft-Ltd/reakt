@@ -10,7 +10,7 @@ dependencies {
     api(project(":reakt-icons"))
 }
 
-aSoftLibrary(
+aSoftOSSLibrary(
     version = vers.asoft.reakt,
     description = "Text components of the Reakt lib"
 )

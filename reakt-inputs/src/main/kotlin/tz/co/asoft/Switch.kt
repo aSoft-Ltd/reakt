@@ -1,6 +1,7 @@
 package tz.co.asoft
 
 import kotlinx.css.*
+import kotlinx.css.Color
 import kotlinx.css.properties.*
 import kotlinx.html.InputType
 import kotlinx.html.js.onChangeFunction
@@ -20,6 +21,7 @@ fun RBuilder.Switch(
     disabled: Boolean = false,
     required: Boolean = false,
     data: Map<String, Any>? = null,
+    color: Color? = null,
     onChanged: ((Boolean) -> Unit)? = null
 ) = ThemeConsumer { theme ->
     styledLabel {
@@ -40,7 +42,7 @@ fun RBuilder.Switch(
                 width = 3.em
                 height = 1.5.em
                 put("appearance", "none")
-                backgroundColor = theme.primaryColor.withAlpha(0.3)
+                backgroundColor = (color ?: theme.primaryColor).withAlpha(0.5)
                 outline = Outline.none
                 borderRadius = 1.5.em
                 transition(duration = 0.5.s)
@@ -48,10 +50,10 @@ fun RBuilder.Switch(
                     offsetX = 0.px,
                     offsetY = 0.px,
                     blurRadius = 2.px,
-                    color = theme.backgroundColor.withAlpha(0.2)
+                    color = (color ?: theme.backgroundColor).withAlpha(0.2)
                 )
                 checked {
-                    backgroundColor = theme.primaryColor
+                    backgroundColor = color ?: theme.primaryColor
                     before { left = 1.5.em }
                 }
                 before {
@@ -62,12 +64,12 @@ fun RBuilder.Switch(
                     borderRadius = 50.pct
                     top = 0.px
                     left = 0.px
-                    backgroundColor = theme.primaryColor
+                    backgroundColor = color ?: theme.primaryColor
                     boxShadow(
                         offsetX = 0.px,
                         offsetY = 0.px,
                         blurRadius = 2.px,
-                        color = theme.onPrimaryColor
+                        color = Color.inherit
                     )
                     transform { scale(1.1) }
                     transition(duration = .5.s)
@@ -85,7 +87,10 @@ fun RBuilder.Switch(
             }
         }
         styledDiv {
-            css { cursor = Cursor.pointer }
+            css {
+                cursor = Cursor.pointer
+                this.color = Color.inherit
+            }
             +label
         }
     }

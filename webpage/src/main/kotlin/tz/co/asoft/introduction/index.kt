@@ -51,4 +51,4 @@ private fun RBuilder.Introduction() = Surface(margin = 0.5.em) { theme ->
     }
 }
 
-val Introduction = WebPage<RProps>("/") { Introduction() }
+val Introduction = WebPage<RProps>("/introduction") { Introduction() }
