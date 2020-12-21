@@ -1,8 +1,6 @@
 package tz.co.asoft
 
 import kotlinx.browser.document
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Job
 import kotlinx.css.*
 import kotlinx.css.Color
 import kotlinx.css.TextAlign
@@ -22,11 +20,11 @@ import styled.StyleSheet
 import styled.css
 import styled.styledDiv
 import styled.styledInput
-import tz.co.asoft.TextInput.Props
-import tz.co.asoft.TextInput.State
+import tz.co.asoft.FlatTextInput.Props
+import tz.co.asoft.FlatTextInput.State
 
 @JsExport
-class TextInput(p: Props) : RComponent<Props, State>(p) {
+class FlatTextInput private constructor(p: Props) : RComponent<Props, State>(p) {
     class Props(
         val name: String,
         val label: String,
@@ -171,7 +169,7 @@ class TextInput(p: Props) : RComponent<Props, State>(p) {
     }
 }
 
-fun RBuilder.TextInput(
+fun RBuilder.FlatTextInput(
     name: String,
     label: String = name,
     hint: String = "",
@@ -180,4 +178,4 @@ fun RBuilder.TextInput(
     value: String? = null,
     isRequired: Boolean = true,
     data: Map<String, Any>? = null
-) = child(TextInput::class.js, Props(name, label, hint, value, type, icon, isRequired, data)) {}
+) = child(FlatTextInput::class.js, Props(name, label, hint, value, type, icon, isRequired, data)) {}

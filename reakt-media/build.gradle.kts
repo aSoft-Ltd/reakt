@@ -10,7 +10,7 @@ dependencies {
     api(project(":reakt-buttons"))
 }
 
-aSoftLibrary(
+aSoftOSSLibrary(
     version = vers.asoft.reakt,
     description = "Media components of the Reakt lib"
 )

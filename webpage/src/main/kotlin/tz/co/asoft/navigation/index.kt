@@ -15,6 +15,6 @@ val NavigationPages = listOf<WebPage<RProps>>(
 )
 
 val NavigationMenus = listOf(
-    NavMenu("Navigation Intro", navigationLink, FaBars, { true }),
-    NavMenu("Navigation Drawer", navigationDrawerLink, FaBars, { true })
+    NavMenu("Navigation Intro", navigationLink, FaBars, "*"),
+    NavMenu("Navigation Drawer", navigationDrawerLink, FaBars, "*")
 )
