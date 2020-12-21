@@ -10,7 +10,6 @@ import react.RBuilder
 import styled.css
 import styled.styledDiv
 import styled.styledHr
-import tz.co.asoft.*
 
 fun RBuilder.TextInputs() = Grid(gap = "1em") { theme ->
     css {
@@ -37,27 +36,27 @@ fun RBuilder.TextInputs() = Grid(gap = "1em") { theme ->
         console.log("Searched $it")
     }
 
-    TextInput(
+    FlatTextInput(
         name = "Text Input",
         label = "Label Example",
         hint = "Hint example"
     )
 
-    TextInput(
+    FlatTextInput(
         name = "Email Input",
         label = "Email label example",
         hint = "john@doe.com",
         type = InputType.email
     )
 
-    TextInput(
+    FlatTextInput(
         name = "Phone Input",
         label = "Phone label example",
         hint = "+255752748674",
         type = InputType.tel
     )
 
-    TextInput(
+    FlatTextInput(
         name = "Password Input",
         label = "Password label example",
         hint = "secret-password",

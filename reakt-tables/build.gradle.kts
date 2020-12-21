@@ -10,7 +10,7 @@ dependencies {
     api(project(":reakt-buttons"))
     api(project(":reakt-icons"))
     api(npm("react-table", "6.10.3"))
-    api(devNpm("file-loader","6.2.0"))
+    api(npm("file-loader","6.2.0"))
 }
 
 aSoftLibrary(
