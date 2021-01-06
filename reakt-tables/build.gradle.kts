@@ -5,12 +5,20 @@ plugins {
     signing
 }
 
-dependencies {
-    api(project(":reakt-layouts"))
-    api(project(":reakt-buttons"))
-    api(project(":reakt-icons"))
-    api(npm("react-table", "6.10.3"))
-    api(npm("file-loader","6.2.0"))
+kotlin {
+    js(IR) { library(forNodeJs = false) }
+
+    sourceSets {
+        val main by getting {
+            dependencies {
+                api(project(":reakt-layouts"))
+                api(project(":reakt-buttons"))
+                api(project(":reakt-icons"))
+                api(npm("react-table", "6.10.3"))
+                api(npm("file-loader","6.2.0"))
+            }
+        }
+    }
 }
 
 aSoftOSSLibrary(

@@ -5,8 +5,16 @@ plugins {
     signing
 }
 
-dependencies {
-    api(project(":reakt-feedback"))
+kotlin {
+    js(IR) { library(forNodeJs = false) }
+
+    sourceSets {
+        val main by getting {
+            dependencies {
+                api(project(":reakt-feedback"))
+            }
+        }
+    }
 }
 
 aSoftOSSLibrary(
