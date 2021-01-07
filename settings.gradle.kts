@@ -18,4 +18,14 @@ pluginManagement {
 rootProject.name = "reakt"
 
 include(":reakt-core")
-include(":reakt-icons:reakt-icons-core")
+include(":reakt-icons")
+include(":reakt-buttons")
+include(":reakt-layouts")
+include(":reakt-feedback")
+include(":reakt-media")
+include(":reakt-navigation")
+include(":reakt-inputs")
+include(":reakt-text")
+include(":reakt-tables")
+include(":reakt-composites")
+include(":webpage")
