@@ -1,4 +1,11 @@
 # 0.0.90: 2021.01.06
+## Bug Fixes
+- Fixed the webpage images
+
+## New Features
+- Added feedback boxes
+- Added Accordion
+
 ## Build Script
 - Updated builders to 1.3.0
 - Updated build scripts to match 1.3.0
