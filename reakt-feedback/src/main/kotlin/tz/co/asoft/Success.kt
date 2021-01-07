@@ -6,6 +6,7 @@ import react.RBuilder
 import styled.css
 import styled.styledDiv
 
+@Deprecated("Use SuccessBox")
 fun RBuilder.Success(msg: String = "Success", handler: (RBuilder.(ReactTheme) -> Unit)? = null) = ThemeConsumer { theme ->
     styledDiv {
         css { +wrapper }

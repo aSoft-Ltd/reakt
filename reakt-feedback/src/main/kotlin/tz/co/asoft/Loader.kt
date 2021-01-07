@@ -6,6 +6,7 @@ import styled.css
 import styled.styledDiv
 import tz.co.asoft.*
 
+@Deprecated("Use LoadingBox")
 fun RBuilder.Loader(text: String) = ThemeConsumer { theme ->
     styledDiv {
         css { +wrapper }

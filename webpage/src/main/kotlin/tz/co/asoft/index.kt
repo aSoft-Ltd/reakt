@@ -14,11 +14,12 @@ fun main() = document.getElementById("root").setContent {
             ReaktWebpage(
                 moduleGroups = mapOf(
                     "Intro" to listOf(
-                        NavMenu("Introduction", "/", FaDownload,"*")
+                        NavMenu("Introduction", "/", FaDownload, "*")
                     ),
+                    "Feedback" to FeedbackMenus,
                     "Navigation" to NavigationMenus
                 ),
-                pages = listOf(Home,Introduction) + NavigationPages
+                pages = listOf(Home, Introduction) + FeedbackPages + NavigationPages
             )
         }
     }

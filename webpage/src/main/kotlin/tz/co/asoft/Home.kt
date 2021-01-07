@@ -12,7 +12,7 @@ import tz.co.asoft.widgets.Installation
 
 private val HomeHook = functionalComponent<RProps> { props ->
     ThemeConsumer { theme ->
-        Surface(bgImageUrl = "/bg.jpg", overlayColor = theme.primaryColor.withAlpha(0.9)) {
+        Surface(bgImageUrl = "bg.jpg", overlayColor = theme.primaryColor.withAlpha(0.9)) {
             css { centerContent() }
             Grid {
                 css {
@@ -20,7 +20,7 @@ private val HomeHook = functionalComponent<RProps> { props ->
                     padding(vertical = 10.pct)
                     centerContent()
                 }
-                styledImg(src = "/k+r.png") {
+                styledImg(src = "k+r.png") {
                     css {
                         width = 50.pct
                     }

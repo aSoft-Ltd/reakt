@@ -1,3 +1,8 @@
+# 0.0.90: 2021.01.06
+## Build Script
+- Updated builders to 1.3.0
+- Updated build scripts to match 1.3.0
+
 # 0.0.8 : 2020.12.21
 ## New Features
 - Added default message in `Success` widget

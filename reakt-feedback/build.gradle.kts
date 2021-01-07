@@ -11,6 +11,7 @@ kotlin {
     sourceSets {
         val main by getting {
             dependencies {
+                api(project(":reakt-buttons"))
                 api(project(":reakt-layouts"))
                 api(project(":reakt-icons"))
             }

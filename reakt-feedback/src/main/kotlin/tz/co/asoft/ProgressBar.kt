@@ -10,7 +10,7 @@ import tz.co.asoft.ProgressBar.Props
 import tz.co.asoft.ProgressBar.State
 
 @JsExport
-class ProgressBar(p: Props) : Component<Props,State>(p) {
+class ProgressBar private constructor(p: Props) : Component<Props,State>(p) {
     class Props(val value: Number?) : RProps
 
     class State : RState {
