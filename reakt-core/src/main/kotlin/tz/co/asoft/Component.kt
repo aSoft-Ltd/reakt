@@ -3,13 +3,11 @@ package tz.co.asoft
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect
-import react.RComponent
-import react.RProps
-import react.RState
-import react.setState
+import react.*
+import react.Component as ReactComponent
 import kotlin.coroutines.CoroutineContext
 
-abstract class Component<P : RProps, S : RState> : RComponent<P, S>, CoroutineScope {
+abstract class Component<P : RProps, S : RState> : ReactComponent<P, S>, CoroutineScope {
     constructor() : super()
     constructor(props: P) : super(props)
 
@@ -34,4 +32,8 @@ abstract class Component<P : RProps, S : RState> : RComponent<P, S>, CoroutineSc
     override fun componentWillUnmount() {
         cancel()
     }
+    
+    abstract fun RBuilder.render(): dynamic
+
+    override fun render() = buildElements { render() }
 }

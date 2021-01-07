@@ -4,11 +4,18 @@ plugins {
     id("io.codearte.nexus-staging")
     signing
 }
+kotlin {
+    js(IR) { library(forNodeJs = false) }
 
-dependencies {
-    api(project(":reakt-layouts"))
-    api(project(":reakt-media"))
-    api(project(":reakt-icons"))
+    sourceSets {
+        val main by getting {
+            dependencies {
+                api(project(":reakt-layouts"))
+                api(project(":reakt-media"))
+                api(project(":reakt-icons"))
+            }
+        }
+    }
 }
 
 aSoftOSSLibrary(

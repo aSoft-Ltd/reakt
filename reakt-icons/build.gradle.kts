@@ -5,9 +5,17 @@ plugins {
     signing
 }
 
-dependencies {
-    api("org.jetbrains:kotlin-react:${vers.wrappers.react}")
-    api(npm("react-icons", "3.10.0"))
+kotlin {
+    js(IR) { library(forNodeJs = false) }
+
+    sourceSets {
+        val main by getting {
+            dependencies {
+                api("org.jetbrains:kotlin-react:${vers.wrappers.react}")
+                api(npm("react-icons", "3.10.0"))
+            }
+        }
+    }
 }
 
 aSoftOSSLibrary(

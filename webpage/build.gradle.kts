@@ -1,13 +1,6 @@
-import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig.DevServer
-
 plugins {
     kotlin("js")
     id("tz.co.asoft.applikation")
-}
-
-repositories {
-    maven(url = "https://oss.sonatype.org/content/repositories/snapshots")
-    publicRepos()
 }
 
 group = "tz.co.asoft.reakt"
@@ -19,23 +12,7 @@ applikation {
 }
 
 kotlin {
-    js(IR) {
-        browser {
-            commonWebpackConfig {
-                cssSupport.enabled = true
-                devServer = DevServer(
-                    open = false,
-                    contentBase = listOf(file("build/processedResources/js/main").absolutePath)
-                )
-            }
-            testTask {
-                useKarma {
-                    useFirefoxDeveloperHeadless()
-                }
-            }
-        }
-        binaries.executable()
-    }
+    js(IR) { application() }
 
     sourceSets {
         val main by getting {

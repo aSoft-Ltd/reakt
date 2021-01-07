@@ -7,7 +7,7 @@ import styled.css
 import styled.styledDiv
 
 @JsExport
-class Dialog : RComponent<Dialog.Props, RState>() {
+class Dialog private constructor(): RComponent<Dialog.Props, RState>() {
     class Props(
         val desktopWidth: LinearDimension,
         val mobileWidth: LinearDimension,

@@ -6,6 +6,7 @@ import react.RBuilder
 import styled.css
 import styled.styledDiv
 
+@Deprecated("Use ErrorBox")
 fun RBuilder.Error(msg: String, handler: (RBuilder.(ReactTheme) -> Unit)? = null) = ThemeConsumer { theme ->
     styledDiv {
         css { +wrapper }
