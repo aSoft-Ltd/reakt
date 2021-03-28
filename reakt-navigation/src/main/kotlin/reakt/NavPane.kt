@@ -7,13 +7,21 @@ import kotlinx.css.properties.transition
 import kotlinx.html.DIV
 import kotlinx.html.classes
 import kotlinx.html.js.onClickFunction
-import react.*
+import react.RBuilder
+import react.RComponent
+import react.RProps
+import react.RState
 import react.router.dom.navLink
+import reakt.NavPane.Props
 import styled.StyledDOMBuilder
 import styled.css
 import styled.styledDiv
-import reakt.NavPane.Props
-import tz.co.asoft.*
+import theme.*
+import tz.co.asoft.isMobile
+import tz.co.asoft.justifySelf
+import kotlin.String
+import kotlin.Unit
+import kotlin.apply
 
 @JsExport
 class NavPane private constructor() : RComponent<Props, RState>() {

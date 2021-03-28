@@ -16,15 +16,15 @@ import styled.styledImg
 import styled.styledInput
 import reakt.ProfilePic.Props
 import reakt.ProfilePic.State
+import theme.primaryColor
 import tz.co.asoft.UIID
 import tz.co.asoft.justifySelf
-import tz.co.asoft.primaryColor
 import tz.co.asoft.to
 import kotlin.lazy
 import kotlin.Float
 
 @JsExport
-class ProfilePic private constructor(): RComponent<Props, State>() {
+class ProfilePic private constructor() : RComponent<Props, State>() {
     class Props(
         val name: String,
         val src: String?,

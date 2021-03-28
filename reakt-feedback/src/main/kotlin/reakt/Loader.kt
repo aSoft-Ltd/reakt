@@ -4,7 +4,7 @@ import kotlinx.css.*
 import react.RBuilder
 import styled.css
 import styled.styledDiv
-import tz.co.asoft.*
+import theme.*
 
 @Deprecated("Use LoadingBox")
 fun RBuilder.Loader(text: String) = ThemeConsumer { theme ->

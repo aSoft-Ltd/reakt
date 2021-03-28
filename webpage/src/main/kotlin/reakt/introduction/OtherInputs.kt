@@ -8,7 +8,7 @@ import reakt.*
 import styled.css
 import styled.styledDiv
 import styled.styledHr
-import tz.co.asoft.clazz
+import theme.clazz
 import tz.co.asoft.onDesktop
 
 fun RBuilder.OtherInputs() = Grid(gap = "1em") { theme ->

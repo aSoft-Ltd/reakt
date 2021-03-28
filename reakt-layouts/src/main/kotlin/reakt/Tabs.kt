@@ -10,9 +10,9 @@ import styled.css
 import styled.styledDiv
 import reakt.Tabs.Props
 import reakt.Tabs.State
-import tz.co.asoft.ThemeConsumer
-import tz.co.asoft.onSurfaceColor
-import tz.co.asoft.surfaceColor
+import theme.ThemeConsumer
+import theme.onSurfaceColor
+import theme.surfaceColor
 
 @JsExport
 class Tabs(p: Props) : RComponent<Props, State>(p) {
@@ -99,7 +99,12 @@ class Tabs(p: Props) : RComponent<Props, State>(p) {
                     padding(horizontal = 0.3.em)
                     paddingTop = 0.3.em
                     paddingBottom = (-0.3).em
-                    boxShadow(offsetY = -props.lineSize, color = theme.onSurfaceColor.withAlpha(0.2), blurRadius = 2.px, spreadRadius = (-1).px)
+                    boxShadow(
+                        offsetY = -props.lineSize,
+                        color = theme.onSurfaceColor.withAlpha(0.2),
+                        blurRadius = 2.px,
+                        spreadRadius = (-1).px
+                    )
                 }
             }
             props.beforeTabs?.let { it() }

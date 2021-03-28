@@ -5,9 +5,9 @@ import kotlinx.css.TextAlign
 import react.RBuilder
 import styled.css
 import styled.styledDiv
-import tz.co.asoft.ReactTheme
-import tz.co.asoft.ThemeConsumer
-import tz.co.asoft.errorColor
+import theme.ReactTheme
+import theme.ThemeConsumer
+import theme.errorColor
 
 @Deprecated("Use ErrorBox")
 fun RBuilder.Error(msg: String, handler: (RBuilder.(ReactTheme) -> Unit)? = null) = ThemeConsumer { theme ->
@@ -19,7 +19,7 @@ fun RBuilder.Error(msg: String, handler: (RBuilder.(ReactTheme) -> Unit)? = null
                 color = theme.errorColor
                 fontSize = 3.em
             }
-            FaRegWindowClose{}
+            FaRegWindowClose {}
         }
 
         styledDiv {

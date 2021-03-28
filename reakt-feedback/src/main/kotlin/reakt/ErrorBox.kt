@@ -6,7 +6,7 @@ import react.RBuilder
 import react.RClass
 import styled.css
 import styled.styledP
-import tz.co.asoft.*
+import theme.*
 
 fun RBuilder.ErrorBox(
     exception: Throwable,

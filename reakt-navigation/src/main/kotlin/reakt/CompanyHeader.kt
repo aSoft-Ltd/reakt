@@ -6,8 +6,8 @@ import react.RBuilder
 import styled.css
 import styled.styledDiv
 import styled.styledImg
-import tz.co.asoft.ThemeConsumer
-import tz.co.asoft.clazz
+import theme.ThemeConsumer
+import theme.clazz
 
 fun RBuilder.CompanyHeader(logoPath: String, userName: String) = ThemeConsumer { theme ->
     styledDiv {

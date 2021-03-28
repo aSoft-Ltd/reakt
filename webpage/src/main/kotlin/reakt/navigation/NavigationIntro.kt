@@ -6,7 +6,7 @@ import react.RBuilder
 import react.router.dom.routeLink
 import reakt.*
 import styled.css
-import tz.co.asoft.*
+import theme.clazz
 
 fun RBuilder.NavigationIntro() = Grid {
     Surface(margin = 0.5.em) { theme ->

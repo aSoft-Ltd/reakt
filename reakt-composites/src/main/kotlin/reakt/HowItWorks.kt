@@ -5,7 +5,10 @@ import kotlinx.css.Color
 import react.RBuilder
 import styled.css
 import styled.styledDiv
-import tz.co.asoft.*
+import theme.*
+import tz.co.asoft.justifySelf
+import tz.co.asoft.onDesktop
+import tz.co.asoft.onMobile
 
 fun RBuilder.HowItWorks(
     vararg stages: String

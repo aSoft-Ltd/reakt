@@ -9,8 +9,8 @@ import react.RBuilder
 import styled.StyledDOMBuilder
 import styled.css
 import styled.styledDiv
-import tz.co.asoft.ReactTheme
-import tz.co.asoft.ThemeConsumer
+import theme.ReactTheme
+import theme.ThemeConsumer
 
 /**
  * Renders an NavigationAppBar.
@@ -26,7 +26,7 @@ fun RBuilder.NavigationAppBar(
     left: (StyledDOMBuilder<DIV>.(ReactTheme) -> Unit)? = null,
     middle: (StyledDOMBuilder<DIV>.(ReactTheme) -> Unit)? = null,
     right: (StyledDOMBuilder<DIV>.(ReactTheme) -> Unit)? = null,
-    bgColor: Color?=null,
+    bgColor: Color? = null,
     color: Color? = null
 ) = AppBar(
     left = {

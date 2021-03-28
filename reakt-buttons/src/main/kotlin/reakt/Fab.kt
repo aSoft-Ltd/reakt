@@ -9,9 +9,9 @@ import kotlinx.html.js.onClickFunction
 import react.RBuilder
 import styled.css
 import styled.styledDiv
-import tz.co.asoft.ThemeConsumer
-import tz.co.asoft.onPrimaryColor
-import tz.co.asoft.primaryColor
+import theme.ThemeConsumer
+import theme.onPrimaryColor
+import theme.primaryColor
 
 fun RBuilder.Fab(text: String = "+", data: Map<String, Any>? = null, onClick: () -> Unit) = ThemeConsumer { theme ->
     styledDiv {

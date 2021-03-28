@@ -6,7 +6,7 @@ import react.RBuilder
 import react.RClass
 import styled.css
 import styled.styledButton
-import tz.co.asoft.ThemeConsumer
+import theme.ThemeConsumer
 
 fun RBuilder.ContainedButton(name: String, icon: RClass<IconProps>? = null, onClick: (() -> Unit)? = null) = ThemeConsumer { theme ->
     styledButton {

@@ -7,10 +7,10 @@ import react.RBuilder
 import styled.StyledDOMBuilder
 import styled.css
 import styled.styledDiv
-import tz.co.asoft.ReactTheme
-import tz.co.asoft.ThemeConsumer
-import tz.co.asoft.onSurfaceColor
-import tz.co.asoft.surfaceColor
+import theme.ReactTheme
+import theme.ThemeConsumer
+import theme.onSurfaceColor
+import theme.surfaceColor
 import kotlinx.css.Color as CssColor
 
 sealed class Surface {

@@ -13,8 +13,8 @@ import styled.css
 import styled.styledDiv
 import styled.styledInput
 import reakt.ContainedTextInput.Props
-import tz.co.asoft.ThemeConsumer
-import tz.co.asoft.primaryColor
+import theme.ThemeConsumer
+import theme.primaryColor
 
 @JsExport
 class ContainedTextInput private constructor() : Component<Props, RState>() {
@@ -74,4 +74,7 @@ fun RBuilder.ContainedTextInput(
     borderRadius: LinearDimension = 5.px,
     padding: LinearDimension = 0.5.em,
     data: Map<String, Any>? = null
-) = child(ContainedTextInput::class.js, Props(name, label, hint, value, type, icon, isRequired, borderRadius, padding, data)) {}
+) = child(
+    ContainedTextInput::class.js,
+    Props(name, label, hint, value, type, icon, isRequired, borderRadius, padding, data)
+) {}

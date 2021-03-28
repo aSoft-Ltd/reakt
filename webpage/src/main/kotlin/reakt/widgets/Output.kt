@@ -8,7 +8,7 @@ import react.RBuilder
 import reakt.*
 import styled.css
 import styled.styledSpan
-import tz.co.asoft.clazz
+import theme.clazz
 
 fun RBuilder.Output() = Grid { theme ->
     Grid("auto 1fr") {
@@ -22,7 +22,7 @@ fun RBuilder.Output() = Grid { theme ->
 
     Grid(gap = 1.em) {
         css { centerContent() }
-        for(i in 1..2) TextInput(name = "name $i", label = "Test Label $i", hint = "John Doe $i")
+        for (i in 1..2) TextInput(name = "name $i", label = "Test Label $i", hint = "John Doe $i")
 
         Button("Submit") {
             window.alert("Hello from Reakt")

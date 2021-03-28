@@ -10,8 +10,8 @@ import react.dom.defaultValue
 import styled.css
 import styled.styledDiv
 import styled.styledInput
-import tz.co.asoft.ThemeConsumer
-import tz.co.asoft.primaryColor
+import theme.ThemeConsumer
+import theme.primaryColor
 
 fun RBuilder.RadioButton(
     label: String,

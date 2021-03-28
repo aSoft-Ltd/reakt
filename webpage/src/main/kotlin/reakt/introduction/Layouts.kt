@@ -1,7 +1,6 @@
 package reakt.introduction
 
 import kotlinx.css.*
-import kotlinx.css.Color
 import kotlinx.css.properties.boxShadow
 import kotlinx.html.DIV
 import react.RBuilder
@@ -10,7 +9,7 @@ import styled.StyledDOMBuilder
 import styled.css
 import styled.styledDiv
 import styled.styledHr
-import tz.co.asoft.clazz
+import theme.clazz
 import tz.co.asoft.onDesktop
 
 fun RBuilder.Layouts() = Grid(gap = "0em") { theme ->

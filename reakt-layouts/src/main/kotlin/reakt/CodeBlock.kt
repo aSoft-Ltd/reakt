@@ -8,10 +8,10 @@ import styled.StyledDOMBuilder
 import styled.css
 import styled.styledCode
 import styled.styledPre
-import tz.co.asoft.ReactTheme
-import tz.co.asoft.ThemeConsumer
-import tz.co.asoft.backgroundColor
-import tz.co.asoft.onBackgroundColor
+import theme.ReactTheme
+import theme.ThemeConsumer
+import theme.backgroundColor
+import theme.onBackgroundColor
 
 fun RBuilder.CodeBlock(builder: StyledDOMBuilder<CODE>.(ReactTheme) -> Unit) = ThemeConsumer { theme ->
     styledPre {

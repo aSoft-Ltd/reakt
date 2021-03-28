@@ -1,17 +1,19 @@
 package reakt
 
 import kotlinx.css.*
-import kotlinx.css.Color
 import kotlinx.html.js.onChangeFunction
 import org.w3c.dom.HTMLSelectElement
 import org.w3c.dom.events.Event
 import react.RBuilder
 import react.dom.key
-import styled.*
-import tz.co.asoft.ThemeConsumer
-import tz.co.asoft.dropdown_clazz
+import styled.css
+import styled.styledDiv
+import styled.styledOption
+import styled.styledSelect
+import theme.ThemeConsumer
+import theme.dropdown_clazz
+import theme.onPrimaryColor
 import tz.co.asoft.justifySelf
-import tz.co.asoft.onPrimaryColor
 
 fun RBuilder.RegionalHeader(
     photoUrl: String,

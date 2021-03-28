@@ -1,16 +1,15 @@
 package reakt.introduction
 
 import kotlinx.css.*
-import kotlinx.css.Color
 import kotlinx.css.properties.boxShadow
 import react.RBuilder
 import reakt.*
 import styled.css
 import styled.styledHr
-import tz.co.asoft.clazz
+import theme.clazz
+import theme.primaryColor
 import tz.co.asoft.onDesktop
 import tz.co.asoft.onMobile
-import tz.co.asoft.primaryColor
 
 fun RBuilder.Icons() = Grid(gap = "0em") { theme ->
     css {

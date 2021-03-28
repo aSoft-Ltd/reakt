@@ -5,7 +5,7 @@ object vers {
     object asoft {
         val reakt = "0.1.0"
         val kotlinx_extensions = "0.0.1"
-        val theme = "0.0.4"
+        val theme = "0.0.60"
         val builders = "1.3.0"
     }
 

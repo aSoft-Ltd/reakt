@@ -4,7 +4,8 @@ import kotlinx.css.*
 import kotlinx.css.Color
 import kotlinx.css.properties.border
 import styled.StyleSheet
-import tz.co.asoft.*
+import theme.*
+import tz.co.asoft.justifySelf
 
 internal object styles : StyleSheet("button") {
     private val button_layout by css {

@@ -8,7 +8,7 @@ import react.buildElement
 import reakt.ReactFoladableTable.foldableTableHOC
 import styled.css
 import styled.styledDiv
-import tz.co.asoft.ThemeConsumer
+import theme.ThemeConsumer
 import tz.co.asoft.justifySelf
 
 fun <D> RBuilder.FoldableTable(

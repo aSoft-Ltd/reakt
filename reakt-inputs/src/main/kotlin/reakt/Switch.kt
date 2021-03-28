@@ -12,7 +12,9 @@ import styled.css
 import styled.styledDiv
 import styled.styledInput
 import styled.styledLabel
-import tz.co.asoft.*
+import theme.*
+import tz.co.asoft.to
+import tz.co.asoft.justifySelf
 
 fun RBuilder.Switch(
     name: String,

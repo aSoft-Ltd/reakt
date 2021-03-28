@@ -7,7 +7,11 @@ import react.RBuilder
 import styled.StyledDOMBuilder
 import styled.css
 import styled.styledDiv
-import tz.co.asoft.*
+import theme.ReactTheme
+import theme.ThemeConsumer
+import theme.onSurfaceColor
+import theme.surfaceColor
+import tz.co.asoft.justifySelf
 
 /**
  * Renders an AppBar.

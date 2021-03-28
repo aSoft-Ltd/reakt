@@ -11,11 +11,14 @@ import react.RBuilder
 import react.RProps
 import react.RState
 import react.setState
-import styled.css
-import styled.styledDiv
 import reakt.NavigationDrawer.Props
 import reakt.NavigationDrawer.State
-import tz.co.asoft.*
+import styled.css
+import styled.styledDiv
+import theme.*
+import tz.co.asoft.onDesktop
+import tz.co.asoft.onMobile
+import tz.co.asoft.onPaper
 
 @JsExport
 class NavigationDrawer private constructor(p: Props) : Component<Props, State>(p) {

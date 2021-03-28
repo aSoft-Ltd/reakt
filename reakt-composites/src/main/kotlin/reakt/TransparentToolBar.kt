@@ -8,7 +8,12 @@ import styled.animation
 import styled.css
 import styled.styledDiv
 import styled.styledLabel
-import tz.co.asoft.*
+import theme.ThemeConsumer
+import theme.clazz
+import tz.co.asoft.Action
+import tz.co.asoft.justifySelf
+import tz.co.asoft.onDesktop
+import tz.co.asoft.onMobile
 
 fun RBuilder.TransparentToolbar(header: String, actions: List<Action<Unit>>) = ThemeConsumer { theme ->
     Grid {

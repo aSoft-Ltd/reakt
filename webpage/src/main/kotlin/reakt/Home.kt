@@ -5,13 +5,16 @@ import kotlinx.css.*
 import react.RProps
 import react.functionalComponent
 import react.router.dom.withRouter
-import styled.css
-import styled.styledDiv
-import styled.styledImg
 import reakt.widgets.Installation
 import reakt.widgets.Output
 import reakt.widgets.Usage
-import tz.co.asoft.*
+import styled.css
+import styled.styledDiv
+import styled.styledImg
+import theme.ThemeConsumer
+import theme.primaryColor
+import tz.co.asoft.onDesktop
+import tz.co.asoft.onMobile
 
 private val HomeHook = functionalComponent<RProps> { props ->
     ThemeConsumer { theme ->

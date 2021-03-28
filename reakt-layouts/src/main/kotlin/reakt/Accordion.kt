@@ -17,8 +17,8 @@ import styled.StyledDOMBuilder
 import styled.css
 import styled.styledDiv
 import reakt.Accordion.Props
-import tz.co.asoft.ReactTheme
-import tz.co.asoft.ThemeConsumer
+import theme.ReactTheme
+import theme.ThemeConsumer
 import tz.co.asoft.UIID
 
 @JsExport

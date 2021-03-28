@@ -3,7 +3,7 @@ package reakt
 import kotlinx.html.DIV
 import react.RClass
 import styled.StyledDOMBuilder
-import tz.co.asoft.ReactTheme
+import theme.ReactTheme
 
 class Tab(
     val name: String,

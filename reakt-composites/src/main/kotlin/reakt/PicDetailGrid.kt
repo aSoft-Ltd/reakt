@@ -6,7 +6,10 @@ import kotlinx.css.properties.transition
 import react.RBuilder
 import styled.css
 import styled.styledDiv
-import tz.co.asoft.*
+import theme.*
+import tz.co.asoft.justifySelf
+import tz.co.asoft.onDesktop
+import tz.co.asoft.onMobile
 
 class PictureDetailGrid(
     val heading: String,
@@ -14,31 +17,32 @@ class PictureDetailGrid(
     val contentPerRow: Int = 3
 )
 
-fun RBuilder.PictureDetailGrid(cs: PictureDetailGrid, spacing: LinearDimension = 3.em) = Grid(gap = spacing.value) { theme ->
-    Grid {
-        css {
-            +theme.text.h2.clazz
-            textAlign = TextAlign.center
-        }
-        +cs.heading
-    }
-    cs.content.chunked(cs.contentPerRow).forEach { rowCircles ->
+fun RBuilder.PictureDetailGrid(cs: PictureDetailGrid, spacing: LinearDimension = 3.em) =
+    Grid(gap = spacing.value) { theme ->
         Grid {
             css {
-                onDesktop {
-                    gridTemplateColumns = GridTemplateColumns(rowCircles.joinToString(" ") { "1fr" })
-                    gap = Gap(spacing.value)
-                    padding(horizontal = spacing)
-                }
-                onMobile {
-                    padding(horizontal = 10.pct)
-                    gridTemplateColumns = GridTemplateColumns("1fr")
-                }
+                +theme.text.h2.clazz
+                textAlign = TextAlign.center
             }
-            for (c in rowCircles) PicDetailGridCell(c)
+            +cs.heading
+        }
+        cs.content.chunked(cs.contentPerRow).forEach { rowCircles ->
+            Grid {
+                css {
+                    onDesktop {
+                        gridTemplateColumns = GridTemplateColumns(rowCircles.joinToString(" ") { "1fr" })
+                        gap = Gap(spacing.value)
+                        padding(horizontal = spacing)
+                    }
+                    onMobile {
+                        padding(horizontal = 10.pct)
+                        gridTemplateColumns = GridTemplateColumns("1fr")
+                    }
+                }
+                for (c in rowCircles) PicDetailGridCell(c)
+            }
         }
     }
-}
 
 class PicDetailInfo(
     val title: String,

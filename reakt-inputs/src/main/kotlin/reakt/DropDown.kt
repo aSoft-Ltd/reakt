@@ -13,10 +13,10 @@ import styled.styledDiv
 import styled.styledOption
 import styled.styledSelect
 import reakt.DropDown.Props
-import tz.co.asoft.ThemeConsumer
-import tz.co.asoft.dropdown_clazz
+import theme.ThemeConsumer
+import theme.dropdown_clazz
+import theme.primaryColor
 import tz.co.asoft.onOptionChanged
-import tz.co.asoft.primaryColor
 
 @JsExport
 class DropDown(p: Props) : RComponent<Props, RState>(p) {

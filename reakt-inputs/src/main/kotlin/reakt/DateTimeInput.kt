@@ -1,8 +1,6 @@
 package reakt
 
 import kotlinx.css.*
-import kotlinx.css.Color
-import kotlinx.css.TextAlign
 import kotlinx.css.properties.LineHeight
 import kotlinx.css.properties.s
 import kotlinx.css.properties.transition
@@ -14,13 +12,17 @@ import kotlinx.html.js.onFocusFunction
 import org.w3c.dom.HTMLInputElement
 import react.*
 import react.dom.defaultValue
+import reakt.DateTimeInput.Props
+import reakt.DateTimeInput.State
 import styled.StyleSheet
 import styled.css
 import styled.styledDiv
 import styled.styledInput
-import reakt.DateTimeInput.Props
-import reakt.DateTimeInput.State
-import tz.co.asoft.*
+import theme.ThemeConsumer
+import theme.onBackgroundColor
+import theme.primaryColor
+import tz.co.asoft.UIID
+import tz.co.asoft.to
 import kotlin.js.Date
 import kotlin.lazy
 

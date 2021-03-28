@@ -6,7 +6,10 @@ import reakt.feedback.FeedbackMenus
 import reakt.feedback.FeedbackPages
 import reakt.navigation.NavigationMenus
 import reakt.navigation.NavigationPages
-import tz.co.asoft.*
+import theme.DarkGrayTheme
+import theme.ThemeProvider
+import theme.currentTheme
+import tz.co.asoft.konfig
 
 val kfg by lazy { konfig() }
 

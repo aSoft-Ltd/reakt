@@ -5,7 +5,7 @@ import kotlinx.css.textAlign
 import react.RBuilder
 import react.dom.br
 import styled.css
-import tz.co.asoft.clazz
+import theme.clazz
 
 fun RBuilder.TrustedBy(num: String) = Grid { theme ->
     css {

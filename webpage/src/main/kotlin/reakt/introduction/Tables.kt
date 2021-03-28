@@ -1,13 +1,12 @@
 package reakt.introduction
 
 import kotlinx.css.*
-import kotlinx.css.Color
 import kotlinx.css.properties.boxShadow
 import react.RBuilder
 import reakt.*
 import styled.css
 import styled.styledHr
-import tz.co.asoft.clazz
+import theme.clazz
 import tz.co.asoft.onDesktop
 
 private class Person(val name: String, val age: Int)

@@ -3,6 +3,8 @@ package reakt
 import kotlinx.coroutines.flow.MutableStateFlow
 import react.RBuilder
 import styled.css
+import theme.*
+import theme.palletes.AquaGreenPallet
 import tz.co.asoft.*
 
 fun RBuilder.ReaktAppBar(drawerController: MutableStateFlow<DrawerState>) = ThemeConsumer { theme ->

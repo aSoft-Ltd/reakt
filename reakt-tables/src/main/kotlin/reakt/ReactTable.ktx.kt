@@ -9,7 +9,7 @@ import react.ReactElement
 import react.buildElement
 import styled.css
 import styled.styledDiv
-import tz.co.asoft.ThemeConsumer
+import theme.ThemeConsumer
 
 internal var isReactTableCssLoaded = false
 fun <D> Column<D>.access(trans: (D) -> Any) {

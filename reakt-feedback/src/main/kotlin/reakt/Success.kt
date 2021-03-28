@@ -5,10 +5,13 @@ import kotlinx.css.TextAlign
 import react.RBuilder
 import styled.css
 import styled.styledDiv
-import tz.co.asoft.*
+import theme.*
 
 @Deprecated("Use SuccessBox")
-fun RBuilder.Success(msg: String = "Success", handler: (RBuilder.(ReactTheme) -> Unit)? = null) = ThemeConsumer { theme ->
+fun RBuilder.Success(
+    msg: String = "Success",
+    handler: (RBuilder.(ReactTheme) -> Unit)? = null
+) = ThemeConsumer { theme ->
     styledDiv {
         css { +wrapper }
 

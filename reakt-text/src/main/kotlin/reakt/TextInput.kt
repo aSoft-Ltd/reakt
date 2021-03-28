@@ -22,9 +22,9 @@ import styled.styledDiv
 import styled.styledInput
 import reakt.FlatTextInput.Props
 import reakt.FlatTextInput.State
-import tz.co.asoft.ThemeConsumer
-import tz.co.asoft.onBackgroundColor
-import tz.co.asoft.primaryColor
+import theme.ThemeConsumer
+import theme.onBackgroundColor
+import theme.primaryColor
 
 @JsExport
 class FlatTextInput private constructor(p: Props) : RComponent<Props, State>(p) {

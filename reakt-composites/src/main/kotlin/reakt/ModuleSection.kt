@@ -4,7 +4,7 @@ import kotlinx.css.*
 import react.RBuilder
 import styled.css
 import styled.styledDiv
-import tz.co.asoft.clazz
+import theme.clazz
 import tz.co.asoft.onDesktop
 import tz.co.asoft.onMobile
 

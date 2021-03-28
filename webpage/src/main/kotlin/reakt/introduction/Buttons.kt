@@ -1,13 +1,13 @@
 package reakt.introduction
 
 import kotlinx.css.*
-import kotlinx.css.Color
 import kotlinx.css.properties.boxShadow
 import react.RBuilder
 import reakt.*
 import styled.css
 import styled.styledHr
-import tz.co.asoft.*
+import theme.clazz
+import tz.co.asoft.onDesktop
 
 fun RBuilder.Buttons() = Grid(gap = "0em") { theme ->
     css {

@@ -5,10 +5,15 @@ import kotlinx.html.js.onClickFunction
 import react.*
 import styled.css
 import styled.styledDiv
-import tz.co.asoft.*
+import theme.ThemeConsumer
+import theme.backgroundColor
+import theme.onSurfaceColor
+import theme.surfaceColor
+import tz.co.asoft.onDesktop
+import tz.co.asoft.onMobile
 
 @JsExport
-class Dialog private constructor(): RComponent<Dialog.Props, RState>() {
+class Dialog private constructor() : RComponent<Dialog.Props, RState>() {
     class Props(
         val desktopWidth: LinearDimension,
         val mobileWidth: LinearDimension,

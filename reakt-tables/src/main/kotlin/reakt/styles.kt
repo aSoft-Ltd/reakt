@@ -4,8 +4,8 @@ import kotlinx.css.Color
 import kotlinx.css.RuleSet
 import kotlinx.css.backgroundColor
 import kotlinx.css.color
-import tz.co.asoft.ReactTheme
-import tz.co.asoft.dropdown_clazz
+import theme.ReactTheme
+import theme.dropdown_clazz
 
 private val follow_theme: RuleSet = {
     backgroundColor = Color.transparent

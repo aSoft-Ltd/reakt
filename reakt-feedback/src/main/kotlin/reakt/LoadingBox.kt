@@ -3,7 +3,7 @@ package reakt
 import kotlinx.css.Color
 import react.RBuilder
 import react.RClass
-import tz.co.asoft.*
+import theme.*
 
 fun RBuilder.LoadingBox(
     title: String = "Loading . . .",

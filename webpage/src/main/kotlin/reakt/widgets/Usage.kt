@@ -8,7 +8,7 @@ import reakt.FaTools
 import reakt.Grid
 import styled.css
 import styled.styledSpan
-import tz.co.asoft.clazz
+import theme.clazz
 
 fun RBuilder.Usage() = Grid { theme ->
     Grid("auto 1fr") {
