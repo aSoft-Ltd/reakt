@@ -10,7 +10,10 @@ import tz.co.asoft.konfig
 
 private val drawerState = MutableStateFlow(DrawerState.Closed)
 
-fun RBuilder.ReaktWebpage(moduleGroups: Map<String, List<NavMenu>>, pages: List<WebPage<out RProps>>) = NavigationDrawer(
+fun RBuilder.ReaktWebpage(
+    moduleGroups: Map<String, List<NavMenu>>,
+    pages: List<WebPage<out RProps>>
+) = NavigationDrawer(
     drawerState = drawerState,
     drawer = {
         val version: String by konfig()
@@ -23,10 +26,8 @@ fun RBuilder.ReaktWebpage(moduleGroups: Map<String, List<NavMenu>>, pages: List<
     content = {
         ReaktAppBar(drawerState)
         switch {
-            pages.forEach {
-                route(it.route, exact = true, render = it.render)
-            }
-            redirect(to = "/")
+            for (p in pages) route(p.route, exact = true, render = p.render)
+            redirect(to = "/reakt")
         }
         FooterRibbon("aSoft Ltd")
     }

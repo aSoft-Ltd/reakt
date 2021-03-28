@@ -20,7 +20,7 @@ fun main() = document.getElementById("root").setContent {
             ReaktWebpage(
                 moduleGroups = mapOf(
                     "Intro" to listOf(
-                        NavMenu("Introduction", "/", FaDownload, "*")
+                        NavMenu("Introduction", "/reakt", FaDownload, "*")
                     ),
                     "Feedback" to FeedbackMenus,
                     "Navigation" to NavigationMenus

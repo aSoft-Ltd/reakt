@@ -59,6 +59,6 @@ private val HomeHook = functionalComponent<RProps> { props ->
     }
 }
 
-val Home = WebPage<RProps>("/") {
+val Home = WebPage<RProps>("/reakt") {
     child(withRouter(HomeHook), jsObject()) {}
 }
