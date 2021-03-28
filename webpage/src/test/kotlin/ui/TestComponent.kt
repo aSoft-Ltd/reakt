@@ -3,7 +3,7 @@ package ui
 import react.RProps
 import react.functionalComponent
 import styled.styledDiv
-import tz.co.asoft.Grid
+import reakt.Grid
 import ui.enzyme.EnzymeAdapterReact16
 import ui.enzyme.configure
 import ui.enzyme.shallow

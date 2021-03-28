@@ -12,7 +12,12 @@ applikation {
 }
 
 kotlin {
-    js(IR) { application() }
+    js(IR) {
+        application()
+        browser {
+            testTask { enabled = false }
+        }
+    }
 
     sourceSets {
         val main by getting {
