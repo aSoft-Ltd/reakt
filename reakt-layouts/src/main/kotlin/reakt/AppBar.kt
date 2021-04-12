@@ -11,7 +11,7 @@ import theme.ReactTheme
 import theme.ThemeConsumer
 import theme.onSurfaceColor
 import theme.surfaceColor
-import tz.co.asoft.justifySelf
+import kotlinx.extensions.justifySelf
 
 /**
  * Renders an AppBar.

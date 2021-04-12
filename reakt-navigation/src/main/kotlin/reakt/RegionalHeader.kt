@@ -13,7 +13,7 @@ import styled.styledSelect
 import theme.ThemeConsumer
 import theme.dropdown_clazz
 import theme.onPrimaryColor
-import tz.co.asoft.justifySelf
+import kotlinx.extensions.justifySelf
 
 fun RBuilder.RegionalHeader(
     photoUrl: String,

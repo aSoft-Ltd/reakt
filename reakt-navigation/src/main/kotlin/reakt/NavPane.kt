@@ -17,8 +17,8 @@ import styled.StyledDOMBuilder
 import styled.css
 import styled.styledDiv
 import theme.*
-import tz.co.asoft.isMobile
-import tz.co.asoft.justifySelf
+import kotlinx.extensions.isMobile
+import kotlinx.extensions.justifySelf
 import kotlin.String
 import kotlin.Unit
 import kotlin.apply

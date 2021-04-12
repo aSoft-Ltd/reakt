@@ -3,9 +3,9 @@ package reakt
 import kotlinx.css.*
 import kotlinx.css.Color
 import kotlinx.css.properties.border
+import kotlinx.extensions.justifySelf
 import styled.StyleSheet
 import theme.*
-import tz.co.asoft.justifySelf
 
 internal object styles : StyleSheet("button") {
     private val button_layout by css {

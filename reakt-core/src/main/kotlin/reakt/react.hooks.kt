@@ -5,7 +5,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.collect
 import react.*
-import tz.co.asoft.UIID
+import kotlinx.extensions.UIID
 import kotlin.coroutines.CoroutineContext
 import kotlin.reflect.KProperty
 

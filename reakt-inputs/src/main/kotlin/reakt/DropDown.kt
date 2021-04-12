@@ -16,7 +16,7 @@ import reakt.DropDown.Props
 import theme.ThemeConsumer
 import theme.dropdown_clazz
 import theme.primaryColor
-import tz.co.asoft.onOptionChanged
+import kotlinx.extensions.onOptionChanged
 
 @JsExport
 class DropDown(p: Props) : RComponent<Props, RState>(p) {

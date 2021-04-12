@@ -5,7 +5,7 @@ import react.RBuilder
 import styled.css
 import styled.styledDiv
 import theme.clazz
-import tz.co.asoft.justifySelf
+import kotlinx.extensions.justifySelf
 
 class Demo(
     val header: String,

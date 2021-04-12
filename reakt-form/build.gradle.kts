@@ -6,19 +6,18 @@ plugins {
 }
 
 kotlin {
-    js(IR) { library() }
+    js(IR) { browserLib() }
     sourceSets {
         val main by getting {
             dependencies {
                 api("tz.co.asoft:theme-react:${vers.asoft.theme}")
-                api("tz.co.asoft:reakt-core:${vers.asoft.reakt}")
-                api(project(":form-html"))
+                api(project(":reakt-core"))
             }
         }
     }
 }
 
 aSoftOSSLibrary(
-    version = vers.asoft.form,
+    version = vers.asoft.reakt,
     description = "Form tools to work with Forms in react"
 )

@@ -21,8 +21,8 @@ import styled.styledInput
 import theme.ThemeConsumer
 import theme.onBackgroundColor
 import theme.primaryColor
-import tz.co.asoft.UIID
-import tz.co.asoft.to
+import kotlinx.extensions.UIID
+import kotlinx.extensions.to
 import kotlin.js.Date
 import kotlin.lazy
 

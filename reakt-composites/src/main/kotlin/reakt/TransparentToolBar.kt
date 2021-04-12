@@ -2,6 +2,7 @@ package reakt
 
 import kotlinx.css.*
 import kotlinx.css.properties.s
+import kotlinx.extensions.actions.Action
 import kotlinx.html.js.onClickFunction
 import react.RBuilder
 import styled.animation
@@ -10,10 +11,9 @@ import styled.styledDiv
 import styled.styledLabel
 import theme.ThemeConsumer
 import theme.clazz
-import tz.co.asoft.Action
-import tz.co.asoft.justifySelf
-import tz.co.asoft.onDesktop
-import tz.co.asoft.onMobile
+import kotlinx.extensions.justifySelf
+import kotlinx.extensions.onDesktop
+import kotlinx.extensions.onMobile
 
 fun RBuilder.TransparentToolbar(header: String, actions: List<Action<Unit>>) = ThemeConsumer { theme ->
     Grid {

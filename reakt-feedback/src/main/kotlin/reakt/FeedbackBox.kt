@@ -3,13 +3,14 @@ package reakt
 import kotlinx.css.*
 import kotlinx.css.Color
 import kotlinx.css.properties.boxShadow
+import kotlinx.extensions.onDesktop
+import kotlinx.extensions.onMobile
 import kotlinx.html.DIV
 import react.*
 import styled.StyledDOMBuilder
 import styled.css
 import styled.styledDiv
 import reakt.FeedbackBox.Props
-import tz.co.asoft.*
 
 @JsExport
 class FeedbackBox private constructor() : RComponent<Props, RState>() {

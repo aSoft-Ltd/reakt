@@ -9,8 +9,8 @@ import styled.styledProgress
 import reakt.ProgressBar.Props
 import reakt.ProgressBar.State
 import theme.*
-import tz.co.asoft.onDesktop
-import tz.co.asoft.onMobile
+import kotlinx.extensions.onDesktop
+import kotlinx.extensions.onMobile
 
 @JsExport
 class ProgressBar private constructor(p: Props) : Component<Props, State>(p) {

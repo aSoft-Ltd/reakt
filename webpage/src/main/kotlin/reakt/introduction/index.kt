@@ -9,8 +9,8 @@ import reakt.*
 import styled.css
 import styled.styledDiv
 import theme.clazz
-import tz.co.asoft.onDesktop
-import tz.co.asoft.onMobile
+import kotlinx.extensions.onDesktop
+import kotlinx.extensions.onMobile
 
 private fun RBuilder.Introduction() = Surface(margin = 0.5.em) { theme ->
     Grid {

@@ -19,7 +19,7 @@ import styled.styledDiv
 import reakt.Accordion.Props
 import theme.ReactTheme
 import theme.ThemeConsumer
-import tz.co.asoft.UIID
+import kotlinx.extensions.UIID
 
 @JsExport
 class Accordion private constructor() : Component<Props, RState>() {

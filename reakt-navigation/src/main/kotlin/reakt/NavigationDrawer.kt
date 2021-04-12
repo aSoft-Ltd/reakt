@@ -16,9 +16,9 @@ import reakt.NavigationDrawer.State
 import styled.css
 import styled.styledDiv
 import theme.*
-import tz.co.asoft.onDesktop
-import tz.co.asoft.onMobile
-import tz.co.asoft.onPaper
+import kotlinx.extensions.onDesktop
+import kotlinx.extensions.onMobile
+import kotlinx.extensions.onPaper
 
 @JsExport
 class NavigationDrawer private constructor(p: Props) : Component<Props, State>(p) {

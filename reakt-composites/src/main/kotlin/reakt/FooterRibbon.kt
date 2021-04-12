@@ -6,9 +6,9 @@ import react.dom.a
 import react.dom.div
 import styled.css
 import styled.styledDiv
-import tz.co.asoft.justifySelf
-import tz.co.asoft.onDesktop
-import tz.co.asoft.onMobile
+import kotlinx.extensions.justifySelf
+import kotlinx.extensions.onDesktop
+import kotlinx.extensions.onMobile
 import kotlin.js.Date
 
 fun RBuilder.FooterRibbon(entityName: String) = Grid(cols = "auto auto") {

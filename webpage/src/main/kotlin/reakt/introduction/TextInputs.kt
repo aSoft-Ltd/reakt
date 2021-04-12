@@ -12,7 +12,7 @@ import styled.css
 import styled.styledDiv
 import styled.styledHr
 import theme.clazz
-import tz.co.asoft.onDesktop
+import kotlinx.extensions.onDesktop
 
 fun RBuilder.TextInputs() = Grid(gap = "1em") { theme ->
     css {

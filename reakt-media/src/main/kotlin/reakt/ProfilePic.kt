@@ -17,9 +17,9 @@ import styled.styledInput
 import reakt.ProfilePic.Props
 import reakt.ProfilePic.State
 import theme.primaryColor
-import tz.co.asoft.UIID
-import tz.co.asoft.justifySelf
-import tz.co.asoft.to
+import kotlinx.extensions.UIID
+import kotlinx.extensions.justifySelf
+import kotlinx.extensions.to
 import kotlin.lazy
 import kotlin.Float
 

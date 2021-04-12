@@ -13,8 +13,8 @@ import styled.styledDiv
 import styled.styledImg
 import theme.ThemeConsumer
 import theme.primaryColor
-import tz.co.asoft.onDesktop
-import tz.co.asoft.onMobile
+import kotlinx.extensions.onDesktop
+import kotlinx.extensions.onMobile
 
 private val HomeHook = functionalComponent<RProps> { props ->
     ThemeConsumer { theme ->

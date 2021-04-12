@@ -7,7 +7,7 @@ import reakt.*
 import styled.css
 import styled.styledHr
 import theme.clazz
-import tz.co.asoft.onDesktop
+import kotlinx.extensions.onDesktop
 
 private class Person(val name: String, val age: Int)
 

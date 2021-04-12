@@ -12,7 +12,7 @@ kotlin {
         val main by getting {
             dependencies {
                 api("org.jetbrains.kotlinx:kotlinx-coroutines-core-js:${vers.kotlinx.coroutines}")
-                api("tz.co.asoft:kotlinx-extensions:${vers.asoft.kotlinx_extensions}")
+                api("tz.co.asoft:kotlinx-extensions-browser:${vers.asoft.kotlinx_extensions}")
                 api("org.jetbrains:kotlin-react:${vers.wrappers.react}")
                 api("org.jetbrains:kotlin-styled:${vers.wrappers.styled}")
                 api("org.jetbrains:kotlin-react-router-dom:${vers.wrappers.react_router_dom}")

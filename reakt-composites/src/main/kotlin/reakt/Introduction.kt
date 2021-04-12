@@ -5,9 +5,9 @@ import react.RBuilder
 import styled.css
 import styled.styledDiv
 import theme.clazz
-import tz.co.asoft.justifySelf
-import tz.co.asoft.onDesktop
-import tz.co.asoft.onMobile
+import kotlinx.extensions.justifySelf
+import kotlinx.extensions.onDesktop
+import kotlinx.extensions.onMobile
 
 class Intro(
     val heading: String,

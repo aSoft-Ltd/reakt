@@ -9,7 +9,7 @@ import reakt.ReactFoladableTable.foldableTableHOC
 import styled.css
 import styled.styledDiv
 import theme.ThemeConsumer
-import tz.co.asoft.justifySelf
+import kotlinx.extensions.justifySelf
 
 fun <D> RBuilder.FoldableTable(
     data: List<D>,

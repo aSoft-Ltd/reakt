@@ -9,8 +9,8 @@ import theme.ThemeConsumer
 import theme.backgroundColor
 import theme.onSurfaceColor
 import theme.surfaceColor
-import tz.co.asoft.onDesktop
-import tz.co.asoft.onMobile
+import kotlinx.extensions.onDesktop
+import kotlinx.extensions.onMobile
 
 @JsExport
 class Dialog private constructor() : RComponent<Dialog.Props, RState>() {

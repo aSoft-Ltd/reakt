@@ -1,7 +1,7 @@
 package reakt
 
 import kotlinx.css.*
-import tz.co.asoft.justifySelf
+import kotlinx.extensions.*
 
 inline fun CSSBuilder.centerContent() {
     alignItems = Align.center

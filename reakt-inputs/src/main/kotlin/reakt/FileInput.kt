@@ -20,8 +20,8 @@ import styled.styledDiv
 import styled.styledH4
 import reakt.FileInput.Props
 import reakt.FileInput.State
-import tz.co.asoft.UIID
-import tz.co.asoft.onFileInputChanged
+import kotlinx.extensions.UIID
+import kotlinx.extensions.onFileInputChanged
 
 @JsExport
 class FileInput : RComponent<Props, State>(), CoroutineScope by CoroutineScope(SupervisorJob()) {

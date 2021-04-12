@@ -8,8 +8,8 @@ import styled.css
 import styled.styledHr
 import theme.clazz
 import theme.primaryColor
-import tz.co.asoft.onDesktop
-import tz.co.asoft.onMobile
+import kotlinx.extensions.onDesktop
+import kotlinx.extensions.onMobile
 
 fun RBuilder.Icons() = Grid(gap = "0em") { theme ->
     css {

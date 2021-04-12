@@ -6,7 +6,7 @@ import react.RBuilder
 import styled.StyledDOMBuilder
 import styled.css
 import styled.styledDiv
-import tz.co.asoft.justifySelf
+import kotlinx.extensions.justifySelf
 import kotlin.Float
 
 fun RBuilder.AspectRationDiv(

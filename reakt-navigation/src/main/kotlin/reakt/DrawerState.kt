@@ -3,7 +3,7 @@ package reakt
 import react.createContext
 import kotlinx.coroutines.flow.MutableStateFlow
 import react.RBuilder
-import tz.co.asoft.isDesktop
+import kotlinx.extensions.isDesktop
 
 enum class DrawerState {
     Opened, Closed

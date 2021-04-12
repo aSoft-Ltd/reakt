@@ -17,7 +17,7 @@ import theme.ThemeConsumer
 import theme.onPrimaryColor
 import theme.primaryColor
 import theme.primaryVariantColor
-import tz.co.asoft.UIID
+import kotlinx.extensions.UIID
 
 fun RBuilder.SearchInput(hint: String, css: RuleSet, onSearch: (String) -> Unit) = ThemeConsumer { theme ->
     styledDiv {

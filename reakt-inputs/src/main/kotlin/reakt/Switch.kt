@@ -13,8 +13,8 @@ import styled.styledDiv
 import styled.styledInput
 import styled.styledLabel
 import theme.*
-import tz.co.asoft.to
-import tz.co.asoft.justifySelf
+import kotlinx.extensions.to
+import kotlinx.extensions.justifySelf
 
 fun RBuilder.Switch(
     name: String,

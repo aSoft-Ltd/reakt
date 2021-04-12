@@ -18,7 +18,7 @@ import styled.styledImg
 import styled.styledInput
 import reakt.ImageUploader.Props
 import reakt.ImageUploader.State
-import tz.co.asoft.UIID
+import kotlinx.extensions.UIID
 
 @JsExport
 class ImageUploader(p: Props) : RComponent<Props, State>(p) {
