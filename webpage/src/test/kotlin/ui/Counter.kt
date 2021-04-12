@@ -9,10 +9,7 @@ import react.RState
 import styled.styledButton
 import styled.styledDiv
 import styled.styledP
-import tz.co.asoft.Component
-import tz.co.asoft.ContainedButton
-import tz.co.asoft.FlexBox
-import tz.co.asoft.Grid
+import reakt.Component
 import ui.Counter.Props
 import ui.Counter.State
 

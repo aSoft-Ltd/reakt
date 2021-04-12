@@ -5,7 +5,7 @@ plugins {
     signing
 }
 kotlin {
-    js(IR) { library(forNodeJs = false) }
+    js(IR) { browserLib() }
 
     sourceSets {
         val main by getting {
