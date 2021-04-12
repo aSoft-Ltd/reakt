@@ -12,7 +12,7 @@ applikation {
 }
 
 kotlin {
-    js(IR) { application() }
+    js(IR) { browserApp() }
 
     sourceSets {
         val main by getting {
