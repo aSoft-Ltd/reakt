@@ -9,7 +9,7 @@ import reakt.navigation.NavigationPages
 import theme.DarkGrayTheme
 import theme.ThemeProvider
 import theme.currentTheme
-import tz.co.asoft.konfig
+import applikation.konfig
 
 val kfg by lazy { konfig() }
 

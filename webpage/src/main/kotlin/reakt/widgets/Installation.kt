@@ -9,7 +9,7 @@ import reakt.Grid
 import styled.css
 import styled.styledSpan
 import theme.clazz
-import tz.co.asoft.konfig
+import applikation.konfig
 
 fun RBuilder.Installation() = Grid { theme ->
     val version: String by konfig()

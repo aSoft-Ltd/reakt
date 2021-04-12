@@ -6,20 +6,19 @@ plugins {
 }
 
 kotlin {
-    js(IR) { browserLib() }
-
+    js(IR) { library() }
     sourceSets {
         val main by getting {
             dependencies {
-                api(project(":reakt-core"))
-                api(project(":reakt-icons"))
                 api("tz.co.asoft:theme-react:${vers.asoft.theme}")
+                api("tz.co.asoft:reakt-core:${vers.asoft.reakt}")
+                api(project(":form-html"))
             }
         }
     }
 }
 
 aSoftOSSLibrary(
-    version = vers.asoft.reakt,
-    description = "Buttons of the Reakt lib"
+    version = vers.asoft.form,
+    description = "Form tools to work with Forms in react"
 )

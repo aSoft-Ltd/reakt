@@ -6,7 +6,7 @@ import react.RProps
 import react.router.dom.redirect
 import react.router.dom.route
 import react.router.dom.switch
-import tz.co.asoft.konfig
+import applikation.konfig
 
 private val drawerState = MutableStateFlow(DrawerState.Closed)
 
