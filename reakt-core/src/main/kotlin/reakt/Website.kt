@@ -9,7 +9,7 @@ import react.router.dom.switch
 
 fun RBuilder.Website(pages: List<WebPage<out RProps>>) = browserRouter {
     switch {
-        for(page in pages) route(path = page.route, exact = true, strict = true, render = page.render)
+        for (page in pages) route(path = *arrayOf(page.route), exact = true, strict = true, render = page.render)
         redirect(to = "/")
     }
 }

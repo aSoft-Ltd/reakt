@@ -11,11 +11,16 @@ kotlin {
     sourceSets {
         val main by getting {
             dependencies {
-                api("org.jetbrains.kotlinx:kotlinx-coroutines-core-js:${vers.kotlinx.coroutines}")
-                api("tz.co.asoft:kotlinx-extensions-browser:${vers.asoft.kotlinx_extensions}")
-                api("org.jetbrains:kotlin-react:${vers.wrappers.react}")
-                api("org.jetbrains:kotlin-styled:${vers.wrappers.styled}")
-                api("org.jetbrains:kotlin-react-router-dom:${vers.wrappers.react_router_dom}")
+                api(asoft("kotlinx-extensions-browser", vers.asoft.kotlinx_extensions))
+
+                api(kotlinx("coroutines-core-js", vers.kotlinx.coroutines))
+//                api(kotlinx("html-js", vers.kotlinx.html)) {
+//                    version { strictly(vers.kotlinx.html) }
+//                }
+
+                api(wrapper("react", vers.wrappers.react))
+                api(wrapper("styled", vers.wrappers.styled))
+                api(wrapper("react-router-dom", vers.wrappers.react_router_dom))
             }
         }
     }

@@ -1,4 +1,8 @@
-# 0.1.0: 2021.03.28
+# 0.1.10 : 2021.05.02
+
+- Added kotlin 1.5.0 support
+
+# 0.1.0: 2021.04.13
 
 - Corrected package name from `tz.co.asoft` to `reakt`
 - Updated theme from `0.0.4` to `0.0.60`
