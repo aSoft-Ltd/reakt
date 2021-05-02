@@ -6,7 +6,7 @@ This is an opinionated kotlin first react ui toolkit with multiple components
 ## Setup:Gradle
 ```kotlin
 dependencies {
-    implementation("tz.co.asoft:reakt-[module]:+") // please use the latest version possible
+    implementation("tz.co.asoft:reakt-[module]:0.1.10") // please use the latest version possible
 }
 ```
 
