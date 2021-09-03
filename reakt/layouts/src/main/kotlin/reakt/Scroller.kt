@@ -1,13 +1,11 @@
 package reakt
 
-import react.RClass
+import react.ComponentClass
 
 external interface ScrollerProps : StyledProps
 
 @JsModule("simplebar-react")
 @JsNonModule
 external object SimpleBarReact {
-    val default: RClass<ScrollerProps>
+    val default: ComponentClass<ScrollerProps>
 }
-//@JsName("default")
-//internal external val SimpleBarReact: RClass<ScrollerProps>

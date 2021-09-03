@@ -1,9 +1,10 @@
 plugins {
-    kotlin("js")
-    id("tz.co.asoft.library")
-    id("io.codearte.nexus-staging")
+    alias(jetbrains.plugins.kotlin.js)
+    alias(asoft.plugins.library)
+    alias(nexus.plugins.publish)
     signing
 }
+
 kotlin {
     js(IR) { browserLib() }
 

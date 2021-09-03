@@ -1,7 +1,7 @@
 plugins {
-    kotlin("js")
-    id("tz.co.asoft.library")
-    id("io.codearte.nexus-staging")
+    alias(jetbrains.plugins.kotlin.js)
+    alias(asoft.plugins.library)
+    alias(nexus.plugins.publish)
     signing
 }
 
@@ -13,14 +13,15 @@ kotlin {
             dependencies {
                 api(project(":reakt-core"))
                 api(project(":reakt-icons"))
-                api("tz.co.asoft:theme-react:${vers.asoft.theme}")
-                api(npm("simplebar-react","2.2.0"))
+                api(project(":theme-react"))
+                api(project(":reakt-styles"))
+                api(npm("simplebar-react", "2.2.0"))
             }
         }
     }
 }
 
 aSoftOSSLibrary(
-    version = vers.asoft.reakt,
+    version = asoft.versions.reakt.get(),
     description = "Layouts of the Reakt lib"
 )

@@ -30,7 +30,7 @@ listOf("core", "css", "react").forEach {
 }
 
 listOf(
-    "core", "dom", "styles", "icons", "buttons"
+    "core", "dom", "styles", "icons", "buttons", "layouts"
 ).forEach {
     include(":reakt-$it")
     project(":reakt-$it").projectDir = File("reakt/$it")
