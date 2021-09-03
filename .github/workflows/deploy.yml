@@ -26,6 +26,15 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
+
+      - name: Cache Node Modules
+        uses: actions/cache@v2
+        with:
+          path: ./build/js/node_modules
+          key: ${{ runner.os }}-node-modules-
+          restore-keys: |
+            ${{ runner.os }}-node-modules-
+
       - name: Making gradlew executable
         run: chmod +x ./gradlew
         working-directory: .

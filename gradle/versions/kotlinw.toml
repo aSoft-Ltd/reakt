@@ -1,0 +1,15 @@
+[versions]
+react = "17.0.2-pre.240-kotlin-1.5.30"
+react_router_dom = "5.2.0-pre.240-kotlin-1.5.30"
+extension = "1.0.1-pre.240-kotlin-1.5.30"
+css = "1.0.0-pre.240-kotlin-1.5.30"
+styled = "5.3.1-pre.240-kotlin-1.5.30"
+
+
+[libraries]
+react-core = { module = "org.jetbrains.kotlin-wrappers:kotlin-react", version.ref = "react" }
+react-dom = { module = "org.jetbrains.kotlin-wrappers:kotlin-react-dom", version.ref = "react" }
+react-router-dom = { module = "org.jetbrains.kotlin-wrappers:kotlin-react-router-dom", version.ref = "react_router_dom" }
+styled = { module = "org.jetbrains.kotlin-wrappers:kotlin-styled", version.ref = "styled" }
+extension = { module = "org.jetbrains.kotlin-wrappers:kotlin-extensions", version.ref = "extension" }
+css = { module = "org.jetbrains.kotlin-wrappers:kotlin-css", version.ref = "css" }
