@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
-    kotlin("multiplatform")
+    kotlin("js")
     id("tz.co.asoft.applikation")
 }
 
@@ -31,7 +31,7 @@ kotlin {
     }
 
     sourceSets {
-        val jsMain by getting {
+        val main by getting {
             dependencies {
                 implementation(asoft.applikation.runtime)
                 implementation(project(":reakt-web"))
@@ -40,7 +40,7 @@ kotlin {
             }
         }
 
-        val jsTest by getting {
+        val test by getting {
             dependencies {
                 implementation(asoft.expect.core)
                 implementation(npm("enzyme", "3.11.0"))
