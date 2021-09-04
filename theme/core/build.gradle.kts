@@ -1,7 +1,7 @@
 plugins {
-    alias(jetbrains.plugins.kotlin.multiplatform)
-    alias(asoft.plugins.library)
-    alias(nexus.plugins.publish)
+    kotlin("multiplatform")
+    id("tz.co.asoft.library")
+    id("io.codearte.nexus-staging")
     signing
 }
 

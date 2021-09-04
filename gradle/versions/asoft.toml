@@ -4,6 +4,7 @@ color = "0.0.50"
 foundation = "1.4.0"
 
 [libraries]
+applikation-runtime = { module = "tz.co.asoft:applikation-runtime", version.ref = "foundation" }
 color-core = { module = "tz.co.asoft:color-core", version.ref = "color" }
 color-css = { module = "tz.co.asoft:color-css", version.ref = "color" }
 expect-core = { module = "tz.co.asoft:expect-core", version.ref = "foundation" }
@@ -11,3 +12,4 @@ kotlinx-browser = { module = "tz.co.asoft:kotlinx-browser", version.ref = "found
 
 [plugins]
 library = { id = "tz.co.asoft.library", version.ref = "foundation" }
+applikation = { id = "tz.co.asoft.applikation", version.ref = "foundation" }

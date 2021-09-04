@@ -1,4 +1,4 @@
-config.resolve.modules.push("/media/andylamax/workspace/aSoft/OSS/reakt/code/webpage/build/resources/main")
+config.resolve.modules.push("/media/andylamax/workspace/aSoft/OSS/reakt/code/webpage/build/resources/js")
 config.module.rules.push({
     test: /\.(png|jpe?g|gif|svg)$/i,
     use: [

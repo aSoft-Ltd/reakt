@@ -29,21 +29,9 @@ listOf("core", "css", "react").forEach {
     project(":theme-$it").projectDir = File("theme/$it")
 }
 
-listOf(
-    "core", "dom", "styles", "icons", "buttons", "layouts"
-).forEach {
+listOf("core", "web", "icons").forEach {
     include(":reakt-$it")
     project(":reakt-$it").projectDir = File("reakt/$it")
 }
-//include(":reakt-icons")
-//include(":reakt-buttons")
-//include(":reakt-layouts")
-//include(":reakt-feedback")
-//include(":reakt-media")
-//include(":reakt-navigation")
-//include(":reakt-inputs")
-//include(":reakt-text")
-//include(":reakt-tables")
-//include(":reakt-composites")
-//include(":reakt-form")
-//include(":webpage")
+
+include(":webpage")
