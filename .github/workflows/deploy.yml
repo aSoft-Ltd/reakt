@@ -71,5 +71,5 @@ jobs:
         run: ./gradlew publish
         working-directory: .
       - name: Closing and Releasing Repositories
-        run: ./gradlew :reakt-navigation:closeAndReleaseRepository
+        run: ./gradlew :reakt-core:closeAndReleaseRepository
         working-directory: .
