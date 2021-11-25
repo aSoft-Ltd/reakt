@@ -32,8 +32,8 @@ abstract class Component<P : Props, S : State> : ReactComponent<P, S>, Coroutine
     override fun componentWillUnmount() {
         cancel()
     }
-    
+
     abstract fun RBuilder.render(): dynamic
 
-    override fun render() = buildElements { render() }
+    override fun render() = createElement { render() }
 }

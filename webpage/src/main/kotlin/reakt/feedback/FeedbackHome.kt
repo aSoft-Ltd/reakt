@@ -1,15 +1,17 @@
 package reakt.feedback
 
-import react.*
+import react.Props
+import react.RBuilder
+import react.State
+import react.setState
 import reakt.*
-import reakt.Component
 
 val levelThree = Error("Level 3 exception")
 val deepLevel = RuntimeException("Deep nested cause", levelThree)
 val testingDialog = IllegalStateException("Testing Error Dialog", deepLevel)
 
 @JsExport
-class FeedbackHome private constructor() : Component<RProps, FeedbackHome.FeedbackHomeState>() {
+class FeedbackHome private constructor() : Component<Props, FeedbackHome.FeedbackHomeState>() {
     class FeedbackHomeState(var ui: UI) : State
     sealed class UI {
         object Loading : UI()

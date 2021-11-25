@@ -1,7 +1,6 @@
 plugins {
     kotlin("js")
     id("tz.co.asoft.library")
-    id("io.codearte.nexus-staging")
     signing
 }
 
@@ -18,7 +17,7 @@ kotlin {
                 api(asoft.kotlinx.browser)
                 api(kotlinw.css)
                 api(npm("react-table", "6.10.3"))
-                api(npm("file-loader","6.2.0"))
+                api(npm("file-loader", "6.2.0"))
                 api(npm("simplebar-react", "2.2.0"))
             }
         }
@@ -26,6 +25,5 @@ kotlin {
 }
 
 aSoftOSSLibrary(
-    version = asoft.versions.reakt.get(),
-    description = "A react wrapper tool library for kotlin-react"
+    version = asoft.versions.reakt.get(), description = "A react wrapper tool library for kotlin-react"
 )

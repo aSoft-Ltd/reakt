@@ -34,6 +34,7 @@ kotlin {
         val main by getting {
             dependencies {
                 implementation(asoft.applikation.runtime)
+                implementation(kotlinw.css)
                 implementation(project(":reakt-web"))
                 implementation(npm("@types/enzyme", "3.10.8", generateExternals = false))
                 implementation(npm("@types/enzyme-adapter-react-16", "1.0.6", generateExternals = false))
@@ -42,7 +43,7 @@ kotlin {
 
         val test by getting {
             dependencies {
-                implementation(asoft.expect.core)
+                implementation(asoft.expect.coroutines)
                 implementation(npm("enzyme", "3.11.0"))
                 implementation(npm("enzyme-adapter-react-16", "1.15.5"))
             }
