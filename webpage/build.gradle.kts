@@ -16,6 +16,13 @@ applikation {
     release()
 }
 
+rootProject.plugins.withType(org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin::class.java) {
+    rootProject.the<org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension>().versions.apply {
+        webpackDevServer.version = "4.1.0"
+        webpackCli.version = "4.9.0"
+    }
+}
+
 kotlin {
     js(IR) {
         browserApp {

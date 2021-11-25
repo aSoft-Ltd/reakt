@@ -18,6 +18,6 @@ kotlin {
 }
 
 aSoftOSSLibrary(
-    version = vers.asoft.reakt,
+    version = asoft.versions.reakt.get(),
     description = "A kotlin js wrapper for the react-icons React lib"
 )

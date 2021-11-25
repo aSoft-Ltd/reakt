@@ -17,17 +17,17 @@ val kfg by lazy { konfig() }
 fun main() = document.getElementById("root").setContent {
     currentTheme.value = DarkGrayTheme()
     BrowserRouter {
-//        ThemeProvider {
-//            ReaktWebpage(
-//                moduleGroups = mapOf(
-//                    "Intro" to listOf(
-//                        NavMenu("Introduction", "/reakt", FaDownload, "*")
-//                    ),
-//                    "Feedback" to FeedbackMenus,
-//                    "Navigation" to NavigationMenus
-//                ),
-//                pages = listOf(Home, Introduction) + FeedbackPages + NavigationPages
-//            )
-//        }
+        ThemeProvider {
+            ReaktWebpage(
+                moduleGroups = mapOf(
+                    "Intro" to listOf(
+                        NavMenu("Introduction", "/reakt", FaDownload, "*")
+                    ),
+                    "Feedback" to FeedbackMenus,
+                    "Navigation" to NavigationMenus
+                ),
+                pages = listOf(Home, Introduction) + FeedbackPages + NavigationPages
+            )
+        }
     }
 }
