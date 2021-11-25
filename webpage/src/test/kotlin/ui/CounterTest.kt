@@ -2,7 +2,7 @@ package ui
 
 import kotlinext.js.jsObject
 import kotlinx.coroutines.delay
-import tz.co.asoft.asyncTest
+import kotlinx.coroutines.runTest
 import ui.enzyme.EnzymeAdapterReact16
 import ui.enzyme.configure
 import ui.enzyme.shallow
@@ -29,7 +29,7 @@ class CounterTest {
 
     @Test
     @Ignore
-    fun should_render_counter_component() = asyncTest {
+    fun should_render_counter_component() = runTest {
         val wrapper = shallow { Counter(5) }
         console.log(wrapper.debug())
         wrapper.find("#plus").simulate("click")

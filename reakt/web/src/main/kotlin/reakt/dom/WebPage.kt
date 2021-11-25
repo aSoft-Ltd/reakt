@@ -2,14 +2,14 @@ package reakt
 
 import react.RBuilder
 import react.ReactElement
-import react.buildElement
-import react.router.dom.RouteResultProps
+import react.createElement
+import react.router.dom.RouteComponentProps
 
 open class WebPage(
     val route: String,
-    val builder: RBuilder.(RouteResultProps) -> Unit
+    val builder: RBuilder.(RouteComponentProps) -> Unit
 ) {
-    val render: (RouteResultProps) -> ReactElement? = {
-        buildElement { builder(it) }
+    val render: (RouteComponentProps) -> ReactElement? = {
+        createElement { builder(it) }
     }
 }

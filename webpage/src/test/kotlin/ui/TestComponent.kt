@@ -1,16 +1,16 @@
 package ui
 
-import react.RProps
-import react.functionalComponent
-import styled.styledDiv
+import react.functionComponent
 import reakt.Grid
+import styled.styledDiv
 import ui.enzyme.EnzymeAdapterReact16
 import ui.enzyme.configure
 import ui.enzyme.shallow
 import kotlin.test.BeforeTest
 import kotlin.test.Test
+import react.Props as RProps
 
-val TestComp = functionalComponent<RProps> {
+val TestComp = functionComponent<RProps> {
     styledDiv { +"Test Comp" }
 }
 

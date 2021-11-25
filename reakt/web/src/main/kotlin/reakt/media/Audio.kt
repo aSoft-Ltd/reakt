@@ -9,18 +9,18 @@ import kotlinx.extensions.UIID
 import kotlinx.html.id
 import org.w3c.dom.HTMLAudioElement
 import react.RBuilder
-import react.RProps
+import react.Props
 import react.*
 import styled.styledAudio
 import styled.styledDiv
 import kotlin.math.round
 
-private external interface AudioProps : RProps {
+private external interface AudioProps : Props {
     var src: String
     var volume: Double
 }
 
-private external interface IScrollerProps : RProps {
+private external interface IScrollerProps : Props {
     var updater: StateFlow<Double>
 }
 

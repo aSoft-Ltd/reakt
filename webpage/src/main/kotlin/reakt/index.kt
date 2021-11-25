@@ -1,22 +1,22 @@
 package reakt
 
+import applikation.konfig
 import kotlinx.browser.document
-import react.router.dom.browserRouter
+import react.router.dom.BrowserRouter
 import reakt.feedback.FeedbackMenus
 import reakt.feedback.FeedbackPages
+import reakt.introduction.Introduction
 import reakt.navigation.NavigationMenus
 import reakt.navigation.NavigationPages
 import theme.DarkGrayTheme
 import theme.ThemeProvider
 import theme.currentTheme
-import applikation.konfig
-import reakt.introduction.Introduction
 
 val kfg by lazy { konfig() }
 
 fun main() = document.getElementById("root").setContent {
     currentTheme.value = DarkGrayTheme()
-    browserRouter {
+    BrowserRouter {
         ThemeProvider {
             ReaktWebpage(
                 moduleGroups = mapOf(

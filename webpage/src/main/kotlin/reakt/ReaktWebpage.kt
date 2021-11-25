@@ -1,14 +1,12 @@
 package reakt
 
-import kotlinx.coroutines.flow.MutableStateFlow
-import react.RBuilder
-import react.RProps
-import react.router.dom.redirect
-import react.router.dom.route
-import react.router.dom.switch
 import applikation.konfig
-import reakt.feedback.FeedbackPages
-import reakt.navigation.NavigationPages
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.css.CssBuilder
+import react.RBuilder
+import react.router.dom.Redirect
+import react.router.dom.Route
+import react.router.dom.Switch
 
 private val drawerState = MutableStateFlow(DrawerState.Closed)
 
@@ -27,9 +25,15 @@ fun RBuilder.ReaktWebpage(
     },
     content = {
         ReaktAppBar(drawerState)
-        switch {
-            for (p in pages) route(p.route, exact = true, render = p.builder)
-            redirect(to = "/reakt")
+        Switch {
+            for (p in pages) Route {
+                attrs {
+                    path = arrayOf(p.route)
+                    exact = true
+                    render = p.render
+                }
+            }
+            Redirect { attrs.to = "/reakt" }
         }
         FooterRibbon("aSoft Ltd")
     }

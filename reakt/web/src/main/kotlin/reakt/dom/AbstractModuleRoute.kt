@@ -1,22 +1,25 @@
 package reakt
 
-import react.*
-import react.router.dom.RouteResultProps
+import react.Props
+import react.RBuilder
+import react.ReactElement
+import react.buildElement
+import react.router.dom.RouteComponentProps
 
 abstract class AbstractModuleRoute(
     val permits: List<String>,
     val path: String,
     val scope: String,
-    val render: (props: RouteResultProps) -> ReactElement?
+    val render: (props: RouteComponentProps) -> ReactElement?
 )
 
 fun <T : Props> ModuleRoute(
     path: String,
     permits: List<String>,
     scope: String,
-    builder: RBuilder.(props: RouteResultProps) -> Unit
+    builder: RBuilder.(props: RouteComponentProps) -> Unit
 ): AbstractModuleRoute {
-    val render: (RouteResultProps) -> ReactElement? = {
+    val render: (RouteComponentProps) -> ReactElement? = {
         buildElement { builder(it) }
     }
     return object : AbstractModuleRoute(

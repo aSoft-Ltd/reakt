@@ -3,7 +3,7 @@ package reakt.navigation
 import kotlinx.css.em
 import kotlinx.css.padding
 import react.RBuilder
-import react.router.dom.routeLink
+import react.router.dom.Link
 import reakt.*
 import styled.css
 import theme.clazz
@@ -46,7 +46,8 @@ fun RBuilder.NavigationIntro() = Grid {
     }
 
     Surface(margin = 0.5.em) {
-        routeLink("/navigation/drawer") {
+        Link {
+            attrs.to = "/navigation/drawer"
             Button("Proceed")
         }
     }

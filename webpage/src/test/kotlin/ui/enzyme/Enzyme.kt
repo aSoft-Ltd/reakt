@@ -3,11 +3,12 @@
 
 package ui.enzyme
 
-import kotlinext.js.jsObject
 import org.w3c.dom.Document
 import org.w3c.dom.Element
 import org.w3c.dom.HTMLElement
-import react.*
+import react.Component
+import react.FunctionComponent
+import react.ReactElement
 import kotlin.js.Json
 import kotlin.js.RegExp
 
@@ -234,15 +235,15 @@ external interface CommonWrapper {
     fun hasClass(className: RegExp): Boolean
     fun <K : Any> invoke(invokePropName: K): Any
     fun `is`(selector: String): Boolean
-    fun `is`(selector: FunctionalComponent<*>): Boolean
+    fun `is`(selector: FunctionComponent<*>): Boolean
     fun `is`(selector: Component<*, *>): Boolean
     fun isEmpty(): Boolean
     fun exists(selector: String = definedExternally): Boolean
     fun exists(): Boolean
-    fun exists(selector: FunctionalComponent<*> = definedExternally): Boolean
+    fun exists(selector: FunctionComponent<*> = definedExternally): Boolean
     fun exists(selector: Component<*, *> = definedExternally): Boolean
     fun not(selector: String): CommonWrapper /* this */
-    fun not(selector: FunctionalComponent<*>): CommonWrapper /* this */
+    fun not(selector: FunctionComponent<*>): CommonWrapper /* this */
     fun not(selector: Component<*, *>): CommonWrapper /* this */
     fun text(): String
     fun html(): String
@@ -278,11 +279,11 @@ external interface CommonWrapper {
     fun <R> reduce(fn: (prevVal: R, wrapper: CommonWrapper /* this */, index: Number) -> R, initialValue: R = definedExternally): R
     fun <R> reduceRight(fn: (prevVal: R, wrapper: CommonWrapper /* this */, index: Number) -> R, initialValue: R = definedExternally): R
     fun some(selector: String): Boolean
-    fun some(selector: FunctionalComponent<*>): Boolean
+    fun some(selector: FunctionComponent<*>): Boolean
     fun some(selector: Component<*, *>): Boolean
     fun someWhere(fn: (wrapper: CommonWrapper /* this */) -> Boolean): Boolean
     fun every(selector: String): Boolean
-    fun every(selector: FunctionalComponent<*>): Boolean
+    fun every(selector: FunctionComponent<*>): Boolean
     fun every(selector: Component<*, *>): Boolean
     fun everyWhere(fn: (wrapper: CommonWrapper /* this */) -> Boolean): Boolean
     fun isEmptyRender(): Boolean

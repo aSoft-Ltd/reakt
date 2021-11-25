@@ -8,7 +8,7 @@ plugins {
 kotlin {
     jvm { library() }
     js(IR) { library() }
-    iosTargets(false)
+//    iosTargets(false)
 
     sourceSets {
         val commonMain by getting {

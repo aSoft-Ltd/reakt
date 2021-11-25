@@ -1,7 +1,6 @@
 plugins {
     kotlin("js")
     id("tz.co.asoft.library")
-    id("io.codearte.nexus-staging")
     signing
 }
 
@@ -19,6 +18,6 @@ kotlin {
 }
 
 aSoftOSSLibrary(
-    version = vers.asoft.reakt,
+    version = asoft.versions.reakt.get(),
     description = "A kotlin js wrapper for the react-icons React lib"
 )

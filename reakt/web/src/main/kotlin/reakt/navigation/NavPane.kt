@@ -12,7 +12,7 @@ import kotlinx.html.js.onClickFunction
 import react.Props
 import react.RBuilder
 import react.fc
-import react.router.dom.navLink
+import react.router.dom.NavLink
 import styled.StyledDOMBuilder
 import styled.css
 import styled.styledDiv
@@ -57,7 +57,12 @@ private fun RBuilder.header(props: NavPaneProps) = ThemeConsumer { theme ->
 }
 
 private fun RBuilder.menu(props: NavPaneProps, navMenu: NavMenu) = ThemeConsumer { theme ->
-    navLink(to = navMenu.link, exact = true, strict = true) {
+    NavLink {
+        attrs {
+            to = navMenu.link
+            exact = true
+            strict = true
+        }
         styledDiv {
             css {
                 width = 100.pct

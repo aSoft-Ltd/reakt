@@ -1,15 +1,17 @@
 [versions]
-reakt = "0.1.20"
+reakt = "0.1.22"
 color = "0.0.50"
-foundation = "1.4.0"
+foundation = "1.4.40"
 
 [libraries]
 applikation-runtime = { module = "tz.co.asoft:applikation-runtime", version.ref = "foundation" }
 color-core = { module = "tz.co.asoft:color-core", version.ref = "color" }
 color-css = { module = "tz.co.asoft:color-css", version.ref = "color" }
 expect-core = { module = "tz.co.asoft:expect-core", version.ref = "foundation" }
+expect-coroutines = { module = "tz.co.asoft:expect-coroutines", version.ref = "foundation" }
 kotlinx-browser = { module = "tz.co.asoft:kotlinx-browser", version.ref = "foundation" }
 
 [plugins]
 library = { id = "tz.co.asoft.library", version.ref = "foundation" }
 applikation = { id = "tz.co.asoft.applikation", version.ref = "foundation" }
+deploy = { id = "tz.co.asoft.deploy", version.ref = "foundation" }

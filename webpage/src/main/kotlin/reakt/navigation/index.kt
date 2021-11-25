@@ -1,6 +1,5 @@
 package reakt.navigation
 
-import react.RProps
 import reakt.FaBars
 import reakt.NavMenu
 import reakt.WebPage

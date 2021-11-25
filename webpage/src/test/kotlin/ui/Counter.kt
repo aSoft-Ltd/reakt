@@ -4,17 +4,20 @@ import kotlinx.coroutines.delay
 import kotlinx.html.id
 import kotlinx.html.js.onClickFunction
 import react.RBuilder
-import react.RProps
-import react.RState
+import react.dom.attrs
+import reakt.Component
 import styled.styledButton
 import styled.styledDiv
 import styled.styledP
-import reakt.Component
-import ui.Counter.Props
 import ui.Counter.State
+import react.Props as RProps
+import react.State as RState
+
+external interface Props : RProps {
+    var value: Int
+}
 
 internal class Counter(p: Props) : Component<Props, State>(p) {
-    class Props(val value: Int) : RProps
     class State(var value: Int) : RState
 
     init {
@@ -53,4 +56,6 @@ internal class Counter(p: Props) : Component<Props, State>(p) {
     }
 }
 
-fun RBuilder.Counter(initialValue: Int = 0) = child(Counter::class.js, Props(initialValue)) {}
+fun RBuilder.Counter(initialValue: Int = 0) = child(Counter::class) {
+    attrs.value = initialValue
+}

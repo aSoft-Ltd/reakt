@@ -3,14 +3,13 @@ package reakt.introduction
 import kotlinx.css.GridTemplateColumns
 import kotlinx.css.em
 import kotlinx.css.gridTemplateColumns
+import kotlinx.extensions.onDesktop
+import kotlinx.extensions.onMobile
 import react.RBuilder
-import react.RProps
 import reakt.*
 import styled.css
 import styled.styledDiv
 import theme.clazz
-import kotlinx.extensions.onDesktop
-import kotlinx.extensions.onMobile
 
 private fun RBuilder.Introduction() = Surface(margin = 0.5.em) { theme ->
     Grid {

@@ -1,6 +1,5 @@
 package reakt.feedback
 
-import react.RProps
 import reakt.FaAd
 import reakt.NavMenu
 import reakt.WebPage

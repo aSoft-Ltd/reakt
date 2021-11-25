@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
-    kotlin("multiplatform")
+    kotlin("js")
     id("tz.co.asoft.applikation")
 }
 
@@ -14,6 +14,13 @@ repositories {
 applikation {
     debug()
     release()
+}
+
+rootProject.plugins.withType(org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin::class.java) {
+    rootProject.the<org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension>().versions.apply {
+        webpackDevServer.version = "4.1.0"
+        webpackCli.version = "4.9.0"
+    }
 }
 
 kotlin {
@@ -31,18 +38,19 @@ kotlin {
     }
 
     sourceSets {
-        val jsMain by getting {
+        val main by getting {
             dependencies {
                 implementation(asoft.applikation.runtime)
+                implementation(kotlinw.css)
                 implementation(project(":reakt-web"))
                 implementation(npm("@types/enzyme", "3.10.8", generateExternals = false))
                 implementation(npm("@types/enzyme-adapter-react-16", "1.0.6", generateExternals = false))
             }
         }
 
-        val jsTest by getting {
+        val test by getting {
             dependencies {
-                implementation(asoft.expect.core)
+                implementation(asoft.expect.coroutines)
                 implementation(npm("enzyme", "3.11.0"))
                 implementation(npm("enzyme-adapter-react-16", "1.15.5"))
             }
